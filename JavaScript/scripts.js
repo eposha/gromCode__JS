@@ -1,5 +1,3 @@
-function show(x) {
-    alert(x);
-}
+let a = 'Hello, world!';
 
-show('Hello World!!');
+console.log(a);
