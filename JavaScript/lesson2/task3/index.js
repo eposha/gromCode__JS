@@ -1,17 +1,16 @@
 let goodNumber = 17,
-    anotherNumber = goodNumber,
-    anotherNumber = 77;
+    anotherNumber = goodNumber;
 
-console.log(goodNumber),
-    console.log(anotherNumber);
+console.log(goodNumber);
+
+anotherNumber = 77;
+console.log(anotherNumber);
 
 let customer = {
         name: 'John',
         age: 17
     },
     anotherCustomer = customer;
-
+console.log(customer.age);
 customer.age = 20;
-
-console.log(customer.age),
-    console.log(anotherCustomer.age);
+console.log(anotherCustomer.age);
