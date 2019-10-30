@@ -13,4 +13,16 @@ const l = [1, 2, 3, 4];
 const m = function run() {
     return 17;
 };
-console.log('a: ', typeof a, 'b: ', typeof b, 'c: ', typeof c, 'd: ', typeof d, 'e: ', typeof e, 'f: ', typeof f, 'g: ', typeof g, 'h: ', typeof h, 'i: ', typeof i, 'j: ', typeof j, 'k: ', typeof k, 'l: ', typeof l, 'm: ', typeof m);
+console.log('a: ', typeof a),
+    console.log('a: ', typeof b),
+    console.log('a: ', typeof c),
+    console.log('a: ', typeof d),
+    console.log('a: ', typeof e),
+    console.log('a: ', typeof f),
+    console.log('a: ', typeof g),
+    console.log('a: ', typeof h),
+    console.log('a: ', typeof i),
+    console.log('a: ', typeof j),
+    console.log('a: ', typeof k),
+    console.log('a: ', typeof l),
+    console.log('a: ', typeof m);
