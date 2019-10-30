@@ -14,15 +14,15 @@ const m = function run() {
     return 17;
 };
 console.log('a: ', typeof a),
-    console.log('a: ', typeof b),
-    console.log('a: ', typeof c),
-    console.log('a: ', typeof d),
-    console.log('a: ', typeof e),
-    console.log('a: ', typeof f),
-    console.log('a: ', typeof g),
-    console.log('a: ', typeof h),
-    console.log('a: ', typeof i),
-    console.log('a: ', typeof j),
-    console.log('a: ', typeof k),
-    console.log('a: ', typeof l),
-    console.log('a: ', typeof m);
+    console.log('b: ', typeof b),
+    console.log('c: ', typeof c),
+    console.log('d: ', typeof d),
+    console.log('e: ', typeof e),
+    console.log('f: ', typeof f),
+    console.log('g: ', typeof g),
+    console.log('h: ', typeof h),
+    console.log('i: ', typeof i),
+    console.log('j: ', typeof j),
+    console.log('k: ', typeof k),
+    console.log('l: ', typeof l),
+    console.log('m: ', typeof m);
