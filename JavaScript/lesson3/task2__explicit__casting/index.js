@@ -14,4 +14,11 @@ console.log("' 17 ' to number is " + +' 17 '),
     console.log("' ' to number is " + +' '),
     console.log("' 30d ' to number is " + +' 30d ');
 
-console.log('\'null\' to boolean is ' + Boolean('null'));
+console.log('\'null\' to boolean is ' + Boolean('null')),
+    console.log('\'undefined\' to boolean is ' + Boolean('undefined')),
+    console.log('\'0\' to boolean is ' + Boolean('0')),
+    console.log('\'-0\' to boolean is ' + Boolean('-0')),
+    console.log('\'NaN\' to boolean is ' + Boolean('NaN')),
+    console.log('\'""\' to boolean is ' + Boolean("''")),
+    console.log('\'17\' to boolean is ' + Boolean('17')),
+    console.log('\'"Hello"\' to boolean is ' + Boolean("'Hello'"));
