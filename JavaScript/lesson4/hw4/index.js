@@ -4,4 +4,4 @@ for (let i = 10000000; i >= 0; i--) {
     sum += i;
 }
 
-// console.log(sum);
+console.log(sum);
