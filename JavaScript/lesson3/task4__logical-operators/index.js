@@ -43,7 +43,7 @@ undefined && null && 0 && '' && null;
 
 console.log("'text' && false: ", 'text' && false);
 console.log("true && 'text': ", true && 'text');
-console.log("undefined && null & 0 && '' && null: ", undefined && null && 0 && '' && null);
+console.log("undefined && null && 0 && '' && null: ", undefined && null && 0 && '' && null);
 
 
 /* оператор отрицания (OR) */
@@ -52,7 +52,7 @@ console.log("undefined && null & 0 && '' && null: ", undefined && null && 0 && '
 !'text';
 !!'text';
 
-console.log('!true :', !true);
-console.log('!false :', !false);
-console.log(`!'text' :`, !'text');
-console.log(`!!'text' :`, !!'text');
+console.log('!true: ', !true);
+console.log('!false: ', !false);
+console.log(`!'text': `, !'text');
+console.log(`!!'text': `, !!'text');
