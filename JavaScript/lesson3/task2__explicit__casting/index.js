@@ -5,12 +5,12 @@ console.log('17 to string is ' + '17'),
     console.log('undefined to string is ' + 'undefined'),
     console.log('0 to string is ' + '0');
 
-console.log("' 17d' to number is " + +' 17d'),
-    console.log("' true' to number is " + +' true'),
-    console.log("' false' to number is " + +' false'),
-    console.log("' null' to number is " + +' null'),
-    console.log("' undefined' to number is " + +' undefined'),
-    console.log("' 20' to number is " + +' 20'),
+console.log(" 17d to number is " + +' 17d'),
+    console.log("true to number is " + +' true'),
+    console.log("false to number is " + +' false'),
+    console.log("null to number is " + +' null'),
+    console.log("undefined' to number is " + +' undefined'),
+    console.log("20 to number is " + +' 20'),
     console.log("' ' to number is " + +' '),
-    console.log("' 30d' to number is " + +' 30d');
+    console.log("30d to number is " + +' 30d');
 4
