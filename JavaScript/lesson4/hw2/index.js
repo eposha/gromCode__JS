@@ -7,14 +7,14 @@ for (let i = m; i <= n; i++) {
         result += i;
     }
 }
-console.log(result);
+// console.log(result);
 for (let j = m; j <= n; j++) {
     if (j % 3 == 0) {
         result -= j;
     }
 }
 
-console.log(result);
+// console.log(result);
 
 for (let p = m; p <= n; p++) {
     if (p % 4 == 0) {
