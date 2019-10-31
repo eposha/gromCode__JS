@@ -1,6 +1,6 @@
-let m = 8,
-    n = 18,
-    result = 1;
+let m = 8;
+const n = 18;
+const result = 1;
 
 do {
     if (m % 2 != 0) {
