@@ -12,5 +12,5 @@ const activeUser = anotherUser && defaultUserName;
 const hasAccess = isAdmin || isLoggedIn;
 const isTruthy = message || anotherMessage;
 const isFalsy = !isLoggedIn;
-// const isNotTrue = typeof message && !'number';
-// const isTrue = typeof message || 'boolean';
+const isNotTrue = typeof message === 'number';
+const isTrue = typeof message !== 'boolean';
