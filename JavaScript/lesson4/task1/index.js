@@ -5,5 +5,3 @@ let sum = 0;
 while (n != sum) {
     ++sum
 };
-
-console.log(sum);
