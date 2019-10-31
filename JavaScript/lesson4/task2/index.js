@@ -1,12 +1,13 @@
-let m = 8;
+const m = 8;
 const n = 18;
 let result = 1;
+let a = m;
 
 do {
-    if (m % 2 === 1) {
-        result *= m;
+    if (a % 2 != 0) {
+        result *= a;
     }
-    m++
-} while (m <= n);
+    a++
+} while (a <= n);
 
 // console.log(result);
