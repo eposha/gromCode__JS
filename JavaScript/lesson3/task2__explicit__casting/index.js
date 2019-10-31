@@ -6,7 +6,7 @@ console.log('17 to string is ' + '17'),
     console.log('0 to string is ' + '0');
 
 
-console.log("17d to number is " + +'17d'),
+console.log("17 to number is " + +'17'),
     console.log("true to number is " + +'true'),
     console.log("false to number is " + +'false'),
     console.log("null to number is " + +'null'),
