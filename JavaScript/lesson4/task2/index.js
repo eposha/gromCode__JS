@@ -3,7 +3,7 @@ let m = 8,
     result = 1;
 
 do {
-    if (m % 2 != 0) {
+    if (m % 2 === 1) {
         result *= m;
     }
     m++
