@@ -7,16 +7,18 @@ a <= b;
 a == b;
 a != b;
 
-console.log("'a' < 'b': ", 'a' > 'b'),
-    console.log("'a' <= 'b': ", 'a' <= 'b'),
-    console.log("'a'== 'b': ", 'a' == 'b'),
-    console.log("'a' != 'b': ", 'a' != 'b');
+console.log("'a' > 'b': ", a > b),
+    console.log("'a' <= 'b': ", a <= b),
+    console.log("'a'== 'b': ", a == b),
+    console.log("'a' != 'b': ", a != b);
 
 
 /* сравнение строк */
 
 'a' < 'b';
 'ab' > 'a';
+
+console.log("'a' < 'b': ", 'a' < 'b');
 
 /* строгое сравнение */
 
