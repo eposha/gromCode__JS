@@ -8,6 +8,10 @@ console.log('+17: ', +17),
 10 + '5';
 'some' + 'text';
 
+console.log("10 + '5'", 10 + '5'),
+    console.log("'some' + 'text'", 'some' + 'text');
+
+
 // Математические операции с undefined возвращают NaN
 undefined + 1;
 null + 8;
