@@ -10,4 +10,4 @@ do {
     a++
 } while (a <= n);
 
-// console.log(result);
+// console.log(result);5
