@@ -13,4 +13,3 @@ console.log("17d to number is " + +'17d'),
     console.log("20 to number is " + +'20'),
     console.log("'' to number is " + +''),
     console.log("30d to number is " + +'30d');
-4
