@@ -7,10 +7,10 @@ a <= b;
 a == b;
 a != b;
 
-console.log("'a' > 'b': ", a > b),
-    console.log("'a' <= 'b': ", a <= b),
-    console.log("'a'== 'b': ", a == b),
-    console.log("'a' != 'b': ", a != b);
+console.log("a > b: ", a > b),
+    console.log("a <= b: ", a <= b),
+    console.log("a == b: ", a == b),
+    console.log("a != b: ", a != b);
 
 
 /* сравнение строк */
@@ -19,10 +19,7 @@ console.log("'a' > 'b': ", a > b),
 'ab' > 'a';
 
 console.log("'a' < 'b': ", 'a' < 'b'),
-    console.log("'a' > 'b': ", 'a' > 'a'),
-    console.log("'a' <= 'b': ", 'a' <= 'b'),
-    console.log("'a' == 'b': ", 'a' == 'b'),
-    console.log("'a' != 'b': ", 'a' != 'b');
+    console.log("'ab' > 'a': ", 'ab' > 'a');
 
 /* строгое сравнение */
 
