@@ -1,5 +1,5 @@
 const m = 1;
-const n = 5;
+const n = 2;
 let result = 0;
 
 
