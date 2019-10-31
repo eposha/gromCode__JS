@@ -14,5 +14,3 @@ const isTruthy = message || anotherMessage;
 const isFalsy = !isLoggedIn;
 const isNotTrue = typeof message && !'number';
 const isTrue = typeof message || 'boolean';
-
-console.log(isNotTrue);
