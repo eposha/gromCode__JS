@@ -54,7 +54,7 @@ false == 0;
 
 console.log("17 == '17': ", 17 == '17'),
     console.log("'0' == '': ", '0' == ''),
-    console.log("'0' == ' ': ", '0' == ' '),
+    console.log("'0' == '': ", '0' == ''),
     console.log("null == undefined: ", null == undefined),
     console.log("false == 0: ", false == 0);
 
@@ -67,3 +67,9 @@ undefined == 0;
 null == 0;
 undefined < 0;
 undefined > 0;
+
+console.log("undefined == null: ", undefined == null),
+    console.log("undefined == 0: ", undefined == 0),
+    console.log("null == 0: ", null == 0),
+    console.log("undefined < 0: ", undefined < 0),
+    console.log("undefined > 0: ", undefined > 0);
