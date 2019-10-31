@@ -2,6 +2,6 @@ const n = 101;
 let sum = 0;
 
 
-while (n != sum) {
-    ++sum
+for (let i = 0; i <= n; ++i) {
+    sum += i;
 };
