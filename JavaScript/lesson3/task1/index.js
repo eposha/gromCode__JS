@@ -1,7 +1,9 @@
 // Унарный плюс приводит операнд к числу
-+17 + '77';
++17; +
+'77';
 
-
+console.log('+17: ', +17),
+    console.log("'77': ", '77');
 // Бинарный плюс складывает строки или прибавляет числа
 10 + '5';
 'some' + 'text';
@@ -35,6 +37,3 @@ undefined + 1;
 null + 8;
 undefined + '5';
 'text' + null;
-
-console.log(+17 + '77', 10 + '5', 'some' + 'text', undefined + 1, null + 8, undefined + '5', 7 - null, 5 - undefined, 'text' + null, ++num, num++, '24' / 4, 18 * '3', '9' - '3', 'seventeen' / 3, 4 * 'four', 17 / 0, 10 + 'seven', undefined + 1, null + 8, undefined + '5',
-    'text' + null)
