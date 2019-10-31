@@ -22,3 +22,4 @@ console.log('\'null\' to boolean is ' + Boolean('null')),
     console.log('\'""\' to boolean is ' + Boolean("''")),
     console.log('\'17\' to boolean is ' + Boolean('17')),
     console.log('\'"Hello"\' to boolean is ' + Boolean("'Hello'"));
+5
