@@ -1,7 +1,7 @@
 function getSum(arr) {
     let sum = 0;
 
-    if (!Array.isArray) {
+    if (!Array.isArray(arr)) {
         return null;
     }
 
