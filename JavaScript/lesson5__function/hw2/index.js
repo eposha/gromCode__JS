@@ -1,16 +1,14 @@
 function getPrimes(n) {
-    for (let i = 2; i <= n; i++) {
-        for (d = 2; d <= i; d++) {
-            if (n % d == 0) {
-                break;
-            } else {
-                console.log(i);
+
+    nextStep: for (let i = 2; i < n; i++) {
+        for (let j = 2; j < i; j++) {
+            if (i % j == 0) {
+                continue nextStep;
             }
+
         }
-        // если нет нетривиальных делителей, то простое
-
+        console.log(i);
     }
-
 };
 
-getPrimes(7);
+// getPrimes(10);
