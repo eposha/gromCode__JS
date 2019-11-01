@@ -1,7 +1,9 @@
-const n = 101;
-let sum = 0;
+function square(num) {
+    let result = 1;
+    for (let i = 1; i <= num; i++) {
+        result *= num;
+    }
+    return result;
+}
 
-
-for (let i = 0; i <= n; ++i) {
-    sum += i;
-};
+console.log(square(3));
