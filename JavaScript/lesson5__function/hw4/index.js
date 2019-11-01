@@ -1,7 +1,15 @@
-const n = 17;
-let sum = '';
-let a = 1;
-while (a <= n) {
-    console.log(sum += a);
-    a++;
+function compareSums(a, b, c, d) {
+    function sum(from, to) {
+        let result = 0;
+        for (let i = from; i <= to; i++) {
+            result += i;
+        }
+        return result;
+    }
+
+    if (sum(a, b) > sum(c, d)) {
+        return true;
+    } else {
+        return false;
+    }
 }

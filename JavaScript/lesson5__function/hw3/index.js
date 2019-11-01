@@ -1,15 +1,10 @@
-function compareSums(a, b, c, d) {
-    function sum(from, to) {
-        let result = 0;
-        for (let i = from; i <= to; i++) {
-            result += i;
-        }
-        return result;
-    }
-
-    if (sum(a, b) > sum(c, d)) {
-        return true;
+function increaser(a, index) {
+    if (a > index) {
+        a += index;
+        return a;
     } else {
-        return false;
+        return a;
     }
 }
+
+console.log(increaser(4, 7));

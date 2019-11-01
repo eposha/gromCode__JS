@@ -1,10 +1,16 @@
-function increaser(a, index) {
-    if (a > index) {
-        a += index;
-        return a;
-    } else {
-        return a;
-    }
-}
+function getPrimes(n) {
+    for (let i = 2; i <= n; i++) {
+        for (d = 2; d <= i; d++) {
+            if (n % d == 0) {
+                break;
+            } else {
+                console.log(i);
+            }
+        }
+        // если нет нетривиальных делителей, то простое
 
-console.log(increaser(4, 7));
+    }
+
+};
+
+getPrimes(7);

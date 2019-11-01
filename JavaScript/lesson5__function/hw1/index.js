@@ -1,16 +1,11 @@
-function getPrimes(n) {
-    for (let i = 2; i <= n; i++) {
-        for (d = 2; d <= i; d++) {
-            if (n % d == 0) {
-                break;
-            } else {
-                console.log(i);
-            }
+function getSum(a, b) {
+    let sum = 0;
+    for (let i = a; i <= b; i++) {
+        if (i % 2 == 0) {
+            sum += i;
         }
-        // если нет нетривиальных делителей, то простое
-
     }
+    return sum;
+}
 
-};
-
-getPrimes(7);
+// console.log(getSum(5, 25));
