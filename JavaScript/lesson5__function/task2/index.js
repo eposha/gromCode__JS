@@ -1,6 +1,9 @@
-function sayHi(name) {
-    const hi = 'Hi, ' + name;
-    console.log(hi);
-};
+function getEvenOdd(num) {
+    if (num % 2 == 0) {
+        return 'even';
+    } else {
+        return 'odd';
+    }
+}
 
-sayHi('Tom');
+// console.log(getEvenOdd(14));
