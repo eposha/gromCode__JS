@@ -26,3 +26,26 @@ function getArrayBound(arr) {
 const arrayBound = getArrayBound(numbers);
 
 console.log(arrayBound);
+
+
+
+
+// перебор массива
+// цикл for
+
+const numbers = [11, 22, 33, 55, 66];
+
+// найдем сумму
+
+function sum(numbers) {
+    let sumOfNumbers = 0;
+    for (let i = 0; i < numbers.length; i++) {
+        // console.log(numbers[i]);
+        sumOfNumbers += numbers[i];
+    }
+    return sumOfNumbers;
+}
+
+const sumOfElements = sum(numbers);
+
+console.log('Result: ' + sumOfElements);
