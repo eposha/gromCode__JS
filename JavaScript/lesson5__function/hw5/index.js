@@ -1,7 +1,9 @@
-const n = 17;
-let sum = '';
-let a = 1;
-while (a <= n) {
-    console.log(sum += a);
-    a++;
+function findDivCount(a, b, n) {
+    let result = 0;
+    for (let i = a; i <= b; i++) {
+        if (i % n == 0) {
+            result++;
+        }
+    }
+    return result;
 }
