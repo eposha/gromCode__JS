@@ -83,3 +83,35 @@ console.log(people);
 
 const first = people.shift(); //метод shift() удаляет элементы сначала и возвращает его(их) 
 console.log(first);
+
+
+
+//spread операторы и деструктуризация
+
+const numbers = [11, 22, 33, 55, 66];
+
+// const a = numbers[0],
+//     b = numbers[1];
+
+const [a, b] = numbers; // деструктурируем массив это присваиваем элементу массива перменную
+
+console.log(a, b); // 11, 22
+
+
+
+const numbers = [11, 22, 33, 55, 66];
+const [a, b, ...rest] = numbers; // spread оператор это (...) в данном случае он присваивает все оставшие элементы массива к переменной rest (может быть любое слово):
+console.log(a, b, rest); // получаем 11 12 [33, 55, 66]
+
+// возможности spread оператора
+const numbers = [11, 22, 33, 55, 66];
+const [a, b, ...rest] = numbers;
+console.log(a, b, rest); // вы ведит 11 22 [ 33, 55, 66 ] 
+// чтоб вывести все значения масива без массива от ...rest нужно добавить ... перед spread оператором
+console.log(a, b, ...rest); // 11 22 33 55 66
+// пример перенести аргумент массива сначала в конец
+function swap(arr) {
+    const [start, ...rest] = arr; // spead оператор нельзя ставить в середину т.е. const [start, ...rest, b, c, y] = arr; работать не будет 
+
+    return [...rest, start];
+}

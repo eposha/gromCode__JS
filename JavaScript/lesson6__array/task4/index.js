@@ -1,3 +1,5 @@
-function sum(a = 0, b = 0) {
-    return a + b;
+function swap(arr) {
+    const [start, ...rest] = arr;
+
+    return [...rest, start];
 }
