@@ -49,6 +49,21 @@ function sum(numbers) {
 const sumOfElements = sum(numbers);
 
 console.log('Result: ' + sumOfElements);
+// так же есть продвинутый метод перебора массива for of
+//пример 
+const numbers = [11, 22, 33, 55, 66];
+
+function sum(numbers) {
+    let sumOfNumbers = 0;
+    for (let num of numbers) { // переменная num каждый раз получает следующий аргумент массива
+        sumOfNumbers += num;
+    }
+    return sumOfNumbers;
+}
+
+console.log(sum(numbers));
+
+
 
 
 
