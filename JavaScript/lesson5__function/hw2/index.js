@@ -1,5 +1,5 @@
 function getPrimes(n) {
-
+    console.log(1);
     nextStep: for (let i = 2; i < n; i++) {
         for (let j = 2; j < i; j++) {
             if (i % j == 0) {
@@ -11,4 +11,4 @@ function getPrimes(n) {
     }
 };
 
-// getPrimes(10);
+// getPrimes(100);
