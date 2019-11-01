@@ -1,9 +1,6 @@
 function square(num) {
-    let result = 1;
-    for (let i = 1; i <= num; i++) {
-        result *= num;
-    }
-    return result;
+
+    return num * num;
 }
 
-console.log(square(3));
+console.log(square(20));
