@@ -1,7 +1,6 @@
-const n = 101;
-let sum = 0;
-
-
-for (let i = 0; i <= n; ++i) {
-    sum += i;
+function sayHi(name) {
+    const hi = 'Hi, ' + name;
+    console.log(hi);
 };
+
+sayHi('Tom');
