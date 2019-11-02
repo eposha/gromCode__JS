@@ -1,11 +1,11 @@
-function getSum(a, b) {
-    let sum = 0;
-    for (let i = a; i <= b; i++) {
-        if (i % 2 == 0) {
-            sum += i;
-        }
-    }
-    return sum;
-}
+function reverseArray(arr) {
+    let reversArr = [];
 
-// console.log(getSum(5, 25));
+    if (!Array.isArray(arr)) {
+        return null;
+    }
+    for (let i = 1; i <= arr.length; i++) {
+        reversArr.push(arr[arr.length - i]);
+    }
+    return reversArr;
+}

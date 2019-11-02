@@ -90,7 +90,7 @@ console.log(people);
 people.push('Jack'); // метод push() добавляет элемент в конец массива
 console.log(people);
 
-people.unshift('Doremi'); //метод unshift() добавляет в начало элемент 
+people.unshift('Doremi'); //метод unshift() добавляет элемент в начало массива
 console.log(people);
 
 people.pop('Doremi'); //метод pop() удаляет элемент из конца 
