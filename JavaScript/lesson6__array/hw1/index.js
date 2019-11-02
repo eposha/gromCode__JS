@@ -1,11 +1,11 @@
-function getSum(a, b) {
-    let sum = 0;
-    for (let i = a; i <= b; i++) {
-        if (i % 2 == 0) {
-            sum += i;
-        }
+function squareArray(arr) {
+    let squareArr = [];
+    if (!Array.isArray(arr)) {
+        return null;
     }
-    return sum;
-}
+    for (let i = 0; i < arr.length; i++) {
+        squareArr.push(arr[i] * arr[i])
+    }
+    return squareArr;
 
-// console.log(getSum(5, 25));
+}
