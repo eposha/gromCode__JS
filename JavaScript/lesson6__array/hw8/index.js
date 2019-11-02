@@ -1,11 +1,11 @@
-function getSum(a, b) {
-    let sum = 0;
-    for (let i = a; i <= b; i++) {
-        if (i % 2 == 0) {
-            sum += i;
-        }
-    }
-    return sum;
+const numbers = [5, 6, 55, 78, 30, 85];
+
+function cloneArr(arr) {
+    const [...newArr] = arr;
+
+    newArr[2] = 'Tom';
+    console.log(arr);
+    console.log(newArr);
 }
 
-// console.log(getSum(5, 25));
+console.log(cloneArr(numbers));
