@@ -1,18 +1,20 @@
-function checker(arr) {
-    let max = arr[0],
-        min = arr[0];
+function removeDuplicates(array) {
 
-    for (let num of arr) {
-        if (num > max) {
-            max = num;
+    let uniqueArr = [];
+
+    for (let i = 0; i < array.length; i++) {
+
+        let dublicate = false;
+
+        for (let j = 0; j < uniqueArr.length; j++) {
+            if (array[i] == uniqueArr[j]) {
+                dublicate = true;
+            }
         }
-        if (num < min) {
-            min = num;
+        if (!dublicate) {
+            uniqueArr.push(array[i]);
         }
     }
-    if (max + min > 1000) {
-        return true;
-    } else {
-        return false;
-    }
+
+    return uniqueArr;
 }
