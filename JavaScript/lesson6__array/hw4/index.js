@@ -4,17 +4,17 @@ function uniqueCount(array) {
 
     for (let i = 0; i < array.length; i++) {
 
-        let dublicate = false;
+        let unique = false;
 
         for (let j = 0; j < uniqueArr.length; j++) {
             if (array[i] == uniqueArr[j]) {
-                dublicate = true;
+                unique = true;
             }
         }
-        if (!dublicate) {
+        if (!unique) {
             uniqueArr.push(array[i]);
         }
     }
 
-    return uniqueArr;
+    return uniqueArr.length;
 }
