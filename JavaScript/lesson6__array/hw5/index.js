@@ -1,20 +1,20 @@
 function removeDuplicates(array) {
 
-    let uniqueArr = [];
+    let newArrWithoutDupl = [];
 
     for (let i = 0; i < array.length; i++) {
 
-        let dublicate = false;
+        let duplicate = false;
 
-        for (let j = 0; j < uniqueArr.length; j++) {
-            if (array[i] == uniqueArr[j]) {
-                dublicate = true;
+        for (let j = 0; j < newArrWithoutDupl.length; j++) {
+            if (array[i] == newArrWithoutDupl[j]) {
+                duplicate = true;
             }
         }
-        if (!dublicate) {
-            uniqueArr.push(array[i]);
+        if (!duplicate) {
+            newArrWithoutDupl.push(array[i]);
         }
     }
 
-    return uniqueArr;
+    return newArrWithoutDupl;
 }
