@@ -1,11 +1,18 @@
-function getSum(a, b) {
-    let sum = 0;
-    for (let i = a; i <= b; i++) {
-        if (i % 2 == 0) {
-            sum += i;
+function checker(arr) {
+    let max = arr[0],
+        min = arr[0];
+
+    for (let num of arr) {
+        if (num > max) {
+            max = num;
+        }
+        if (num < min) {
+            min = num;
         }
     }
-    return sum;
+    if (max + min > 1000) {
+        return true;
+    } else {
+        return false;
+    }
 }
-
-// console.log(getSum(5, 25));

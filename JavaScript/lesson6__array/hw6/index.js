@@ -1,11 +1,11 @@
-function getSum(a, b) {
-    let sum = 0;
-    for (let i = a; i <= b; i++) {
-        if (i % 2 == 0) {
-            sum += i;
+function withdraw(clients, balances, client, amount) {
+    for (let i = 0; i < clients.length; i++) {
+        if (clients[i] == client) {
+            if (balances[i] - amount >= 0) {
+                return balances[i] - amount;
+            } else {
+                return -1;
+            }
         }
     }
-    return sum;
 }
-
-// console.log(getSum(5, 25));
