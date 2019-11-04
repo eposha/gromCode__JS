@@ -1,13 +1,10 @@
 function reverseArray(arr) {
-    let reverseArr = [];
-
     if (!Array.isArray(arr)) {
         return null;
     }
 
-    arr.forEach(item => reverseArr.unshift(item));
+    return arr.slice().reverse();
 
-    return reverseArr;
 }
 
 
