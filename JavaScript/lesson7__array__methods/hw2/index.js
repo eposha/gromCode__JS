@@ -1,11 +1,14 @@
 function reverseArray(arr) {
-    let reversArr = [];
+    let reverseArr = [];
 
     if (!Array.isArray(arr)) {
         return null;
     }
-    for (let i = 1; i <= arr.length; i++) {
-        reversArr.push(arr[arr.length - i]);
-    }
-    return reversArr;
+
+    arr.forEach(item => reverseArr.unshift(item));
+
+    return reverseArr;
 }
+
+
+console.log(reverseArray([1, 2, 3, 4, 5, 6, 7, 8, 9]));
