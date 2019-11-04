@@ -1,4 +1,4 @@
-const squareElements = array => {
+const squareArray = array => {
     if (!Array.isArray(array)) {
         return null;
     };
