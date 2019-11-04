@@ -1,5 +1,9 @@
-function swap(arr) {
-    const [start, ...rest] = arr;
+const getMessagesForBestStudents = (allStudents, failedStudents) => {
+    const passedStudent = allStudents
+        .filter(name => !failedStudents.includes(name));
 
-    return [...rest, start];
-}
+    const messages = passedStudent
+        .map(name => 'Good job, ' + name);
+
+    return messages;
+};

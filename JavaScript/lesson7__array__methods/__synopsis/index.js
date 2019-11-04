@@ -121,3 +121,38 @@ const flatArray = arr =>
     arr.flat();
 
 console.log(flatArray([1, [2, 3, 4, 5], 6, [7]]));
+
+
+
+// ['Ann', 'Bob', 'Tom', 'Kate']; ['Tom', 'Bob'] => ['Good job, Ann', 'Good job, Kate']
+
+const getMessagesForBestStudents = (allStudents, failedStudents) => {
+    const passedStudent = allStudents
+        .filter(name => failedStudents.indexOf(name) === -1);
+
+    return passedStudent;
+};
+
+const allStudents = ['Ann', 'Bob', 'Tom', 'Kate'],
+    failedStudents = ['Tom', 'Bob'];
+
+console.log(getMessagesForBestStudents(allStudents, failedStudents));
+
+
+const getMessagesForBestStudents = (allStudents, failedStudents) => {
+    const passedStudent = allStudents
+        .filter(name => !failedStudents.includes(name));
+
+    const messages = passedStudent
+        .map(name => 'Good job, ' + name);
+
+    return messages;
+};
+
+const allStudents = ['Ann', 'Bob', 'Tom', 'Kate'],
+    failedStudents = ['Tom', 'Bob'];
+
+console.log(getMessagesForBestStudents(allStudents, failedStudents));
+
+//1: Find passed students
+//2: Add Good job
