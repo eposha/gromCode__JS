@@ -1,7 +1,7 @@
 const getCustomersList = obj => {
-
-    const arrWithObj = Object.values(obj);
-    const objWithKey = Object.keys(obj);
+    const copyObj = Object.assign({}, obj);
+    const arrWithObj = Object.values(copyObj);
+    const objWithKey = Object.keys(copyObj);
 
 
     for (let i = 0; i < arrWithObj.length; i++) {
@@ -33,7 +33,10 @@ const customers = {
     },
 };
 
-console.log(getCustomersList(customers));
+// console.log(getCustomersList(customers));
+
+
+// console.log(customers);
 
 // const obj = {
 //     'Tom': 18,
