@@ -82,3 +82,42 @@ const sortArray = numbers => {
 };
 
 console.log(sortArray([5, 9, 8, 7, 5, 55, 9, 66, 55, 95, 3, 65, 8, 66]));
+
+const sortDesc = numbers =>
+
+    // let [...sortedArray] = numbers;
+    // let sortedArray = numbers.slice();
+    numbers.slice().sort((a, b) => b - a);
+
+// return sortedArray.sort((a, b) =>
+//     b - a
+// );
+
+
+console.log(sortDesc([5, 9, 8, 7, 5, 55, 9, 66, 55, 95, 3, 65, 8, 66]));
+
+
+// [1,[2,3,4,5],6,[7]] => [1,2,3,4,5,6,7] 
+const flatArray = arr => {
+    let flatArray = arr
+        .reduce((acc, elem) => {
+            return acc.concat(elem);
+        }, []);
+    return flatArray;
+};
+
+
+
+// что делает reduce
+// [1,2,3,4] => 10
+console.log([1, 2, 3, 4].reduce(function(accumulator, num) {
+    return accumulator + num
+}));
+
+
+
+//flat
+const flatArray = arr =>
+    arr.flat();
+
+console.log(flatArray([1, [2, 3, 4, 5], 6, [7]]));
