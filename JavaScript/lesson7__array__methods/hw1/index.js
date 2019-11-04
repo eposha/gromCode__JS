@@ -1,11 +1,12 @@
-function squareArray(arr) {
-    let squareArr = [];
-    if (!Array.isArray(arr)) {
+const squareElements = array => {
+    if (!Array.isArray(array)) {
         return null;
-    }
-    for (let i = 0; i < arr.length; i++) {
-        squareArr.push(arr[i] * arr[i])
-    }
-    return squareArr;
+    };
 
-}
+    return array.map(num => num * num);
+
+};
+
+
+// const someArray = [5, 6, 9, 7, 4, 1, 5];
+// console.log(squareElements(someArray));
