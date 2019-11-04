@@ -1,13 +1,13 @@
 const concatProps = obj => {
-    let arr = [];
+        let arr = [];
 
-    for (let key in obj) {
-        arr.push(obj[key]);
+        for (let key in obj) {
+            arr.push(obj[key]);
+        }
+        return arr;
     }
-    return arr;
-}
-const object = {
-        name: 'Tom',
-        age: 17,
-    }
+    // const object = {
+    //         name: 'Tom',
+    //         age: 17,
+    //     }
     // console.log(concatProps(object));
