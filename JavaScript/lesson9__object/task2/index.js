@@ -1,13 +1,11 @@
-const concatProps = obj => {
-        let arr = [];
+const copyObj = obj => {
+    const copyArray = Object.assign({}, obj);
+    return copyArray;
+}
 
-        for (let key in obj) {
-            arr.push(obj[key]);
-        }
-        return arr;
-    }
-    // const object = {
-    //         name: 'Tom',
-    //         age: 17,
-    //     }
-    // console.log(concatProps(object));
+
+// console.log(copyObj({
+//     'Tom': 18,
+//     'Bob': 24,
+//     'Ivan': 17.
+// }));
