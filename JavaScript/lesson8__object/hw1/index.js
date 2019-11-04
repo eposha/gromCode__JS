@@ -1,12 +1,14 @@
-const squareArray = array => {
-    if (!Array.isArray(array)) {
-        return null;
-    };
+const pickProps = (obj, arr) => {
+    let newObj = {};
 
-    return array.map(num => num * num);
+    for (let i of arr) {
+        for (let key in obj) {
+            if (i == key) {
+                newObj[key] = obj[key];
+            }
+        }
+    }
+    return newObj;
+}
 
-};
-
-
-// const someArray = [5, 6, 9, 7, 4, 1, 5];
-// console.log(squareElements(someArray));
+console.log(pickProps({ a: 1, b: 2, c: 3 }, ['a', 'c']));
