@@ -1,5 +1,6 @@
 const getCustomersList = obj => {
-    const copyObj = Object.assign({}, obj);
+
+    const copyObj = JSON.parse(JSON.stringify(obj));
     const arrWithObj = Object.values(copyObj);
     const objWithKey = Object.keys(copyObj);
 
@@ -14,24 +15,24 @@ const getCustomersList = obj => {
 
 
 
-const customers = {
-    'customer-id-1': {
-        name: 'William',
-        age: 54
-    },
-    'customer-id-2': {
-        name: 'Tom',
-        age: 17
-    },
-    'customer-id-3': {
-        name: 'Inna',
-        age: 22
-    },
-    'customer-id-4': {
-        name: 'Ivan',
-        age: 18
-    },
-};
+// const customers = {
+//     'customer-id-1': {
+//         name: 'William',
+//         age: 54
+//     },
+//     'customer-id-2': {
+//         name: 'Tom',
+//         age: 17
+//     },
+//     'customer-id-3': {
+//         name: 'Inna',
+//         age: 22
+//     },
+//     'customer-id-4': {
+//         name: 'Ivan',
+//         age: 18
+//     },
+// };
 
 // console.log(getCustomersList(customers));
 
