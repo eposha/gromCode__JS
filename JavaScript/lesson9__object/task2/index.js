@@ -5,9 +5,13 @@
 
 const copyObj = obj => Object.assign({}, obj);
 
-
-console.log(copyObj({
-    'Tom': 18,
-    'Bob': 24,
-    'Ivan': 17.
-}));
+// const obj = {
+//     'Tom': 18,
+//     'Bob': 24,
+//     'Ivan': 17.
+// }
+// console.log(copyObj({
+//     'Tom': 18,
+//     'Bob': 24,
+//     'Ivan': 17.
+// }));
