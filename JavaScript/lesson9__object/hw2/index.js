@@ -2,11 +2,7 @@ const getPeople = obj => {
 
     if (obj == {}) return [];
     const arrEntries = Object.entries(obj);
-    const arrFlat = arrEntries.flat();
-    const arrFilter = arrFlat.filter(i => i.indexOf('room'));
-
-
-    return arrFilter.map(i => i.map(i => i.name)).flat();
+    return arrEntries.map(i => i[1].map(i => i.name)).flat();
 }
 
 
