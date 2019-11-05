@@ -9,6 +9,8 @@ const getPeople = obj => {
     return arrFilter.map(i => i.map(i => i.name)).flat();
 }
 
+
+
 // rooms = {
 //     room1: [
 //         { name: 'room1 name1' },
