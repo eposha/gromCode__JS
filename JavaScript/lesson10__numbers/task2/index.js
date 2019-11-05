@@ -1,17 +1,19 @@
-// const copyObj = obj => {
-//     const copyArray = Object.assign({}, obj);
-//     return copyArray;
-// }
+const getParsedIntegers = arr => arr
+    .filter(a => Number.parseInt(a));
 
-const copyObj = obj => Object.assign({}, obj);
+const getParsedIntegersV2 = arr => arr
+    .filter(a => parseInt(a));
 
-// const obj = {
-//     'Tom': 18,
-//     'Bob': 24,
-//     'Ivan': 17.
-// }
-// console.log(copyObj({
-//     'Tom': 18,
-//     'Bob': 24,
-//     'Ivan': 17.
-// }));
+const getParsedFloats = arr => arr
+    .filter(a => Number.parseFloat(a));
+
+const getParsedFloatsV2 = arr => arr
+    .filter(a => parseFloat(a));
+
+
+
+// const array = [1, 5.55, undefined, null, Infinity, 'text', '17text', NaN];
+
+
+// console.log(getParsedIntegers(array));
+// console.log(array);
