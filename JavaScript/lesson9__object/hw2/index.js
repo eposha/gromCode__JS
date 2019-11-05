@@ -1,8 +1,12 @@
 const getPeople = obj => {
 
     if (obj == {}) return [];
+
+
     const arrEntries = Object.entries(obj);
+
     return arrEntries.map(i => i[1].map(i => i.name)).flat();
+
 }
 
 
