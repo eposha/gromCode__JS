@@ -13,7 +13,7 @@ const getNaNV2 = arr => arr
 const getIntegers = arr => arr
     .filter(a => Number.isInteger(a));
 
-const array = [1, 5.55, undefined, null, Infinity, 'text', '17text', NaN];
+// const array = [1, 5.55, undefined, null, Infinity, 'text', '17text', NaN];
 
 
 // console.log(getIntegers(array));
