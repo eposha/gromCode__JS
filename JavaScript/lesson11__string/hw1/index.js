@@ -1,10 +1,24 @@
-const getTotalPrice = arr => {
+const splitString = (text, num = 10) => {
+    if (typeof text !== 'string') return null;
 
-    return '$' + Math.floor(arr.reduce((a, b) => a + b) * 100) / 100;
+    const arr = [];
+    let startPosition = 0;
 
+    while (true) {
+
+        let chunk = text.substr(startPosition, num);
+
+        if (chunk.length === 0) {
+            break;
+        }
+        if (chunk.length < num) {
+            chunk = chunk + '.'.repeat(num - chunk.length);
+        };
+        arr.push(chunk);
+        startPosition += num;
+    }
+
+    return arr;
 }
 
-// const test = [5.5555, 9.3254, 87, -24, 5, -5];
-
-
-// console.log(getTotalPrice(test));
+// console.log(splitString('zjdhbvkzdfbvlkdfzbvkdlzfvbkzdfv'));
