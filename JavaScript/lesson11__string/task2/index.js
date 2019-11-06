@@ -1,22 +1,20 @@
-const getParsedIntegers = arr => arr
-    .map(a => Number.parseInt(a));
+const sortContacts = (contacts, isAsc = true) => {
+        if (!Array.isArray(contacts)) return null;
 
-
-const getParsedIntegersV2 = arr => arr
-    .map(a => parseInt(a));
-
-const getParsedFloats = arr => arr
-    .map(a => Number.parseFloat(a));
-
-const getParsedFloatsV2 = arr => arr
-    .map(a => parseFloat(a));
-
-
-
-// const array = [1, 5.55, undefined, null, Infinity, 'text', '17text', NaN];
-
-
-
-
-// console.log(getParsedIntegersV2(array));
-// console.log(array);
+        return contacts.sort((a, b) => {
+            if (isAsc) {
+                return a.name.localeCompare(b.name);
+            } else {
+                return b.name.localeCompare(a.name);
+            }
+        });
+    }
+    // const text = [
+    //     { name: 'Tom', phoneNumber: '777-77-77' },
+    //     { name: 'Ann', phoneNumber: '777-77-77' },
+    //     { name: 'Ivan', phoneNumber: '777-77-77' },
+    //     { name: 'Andrei', phoneNumber: '777-77-77' },
+    //     { name: 'Petro', phoneNumber: '777-77-77' },
+    //     { name: 'Vasia', phoneNumber: '777-77-77' },
+    // ];
+    // console.log(sortContacts(text));
