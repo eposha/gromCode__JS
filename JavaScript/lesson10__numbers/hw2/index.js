@@ -1,11 +1,22 @@
 const getRandomNumbers = (length, start, end) => {
-    if (start > end) return null;
-    // const arrLength = Array(length);
 
-    // const arrFinish = arrLength.slice(Math.abs(+start.toFixed()), Math.abs(+end.toFixed()));
+    const finishArray = Array(length)
+        .fill().map(i => Math.floor(Math.random() * (end - start + 1)) + start);
 
+    let checkInteg = false;
 
-    return Array(length).fill().map(i => Math.floor(Math.random() * (end - start + 1)) + start)
+    for (let i = 0; i < finishArray.length; i++) {
+        if (Number.isInteger(i)) {
+            checkInteg = true;
+            break;
+        }
+    }
+
+    if (start > end && !checkInteg) {
+        return null;
+    } else {
+        return finishArray;
+    }
 
 
 }
