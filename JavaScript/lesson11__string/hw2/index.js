@@ -1,14 +1,18 @@
-const getRandomNumbers = (length, start, end) => {
-    const noNumbersBetween = (end - start < 1) && Math.ceil(end) === Math.ceil(start);
-    if (start > end || noNumbersBetween) return null;
+const countOccurrences = (text, find) => {
+    if (find === '') return null;
 
-
-    return Array(length)
-        .fill().map(i => Math.floor(Math.random() * (end - start)) + start);
-
-
-
+    return text.split(find)
 }
 
 
-console.log(getRandomNumbers(5, 1, 3));
+const countOccurrences = (str, substr) => {
+    if (substr === '') return null;
+    return str.split(substr);
+}
+
+
+
+
+// const t = 'qwerty qwerty qwerty qwertyuio qwertyuio qasdfghjk sdhsdfh shsfgh hdjhh xghsfh';
+// console.log()
+// console.log(countOccurrences(t, 'qwerty'));
