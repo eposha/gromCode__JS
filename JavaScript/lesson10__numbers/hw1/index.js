@@ -1,10 +1,12 @@
-const getTotalPrice = arr => {
+const getRandomNumbers = (length, start, end) => {
+    const startFixed = start.toFixed();
+    const endFixed = end.toFixed();
 
-    return '$' + Math.floor(arr.reduce((a, b) => a + b) * 100) / 100;
-
+    let arrLength = Array(length);
+    return arrLength.slice(startFixed, endFixed);
 }
 
-// const test = [5.5555, 9.3254, 87, -24, 5, -5];
 
+// const test = [5,6,9,4,5.55,8,8.65];
 
-// console.log(getTotalPrice(test));
+// console.log(getRandomNumbers(5, 1, 6));
