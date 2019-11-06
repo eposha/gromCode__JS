@@ -1,17 +1,15 @@
-// const copyObj = obj => {
-//     const copyArray = Object.assign({}, obj);
-//     return copyArray;
-// }
+const getMaxAbsoluteNumber = arr => {
+    if (!Array.isArray(arr) || arr.length == 0) {
+        return null;
+    }
 
-const copyObj = obj => Object.assign({}, obj);
+    const absoluteValues = arr.map(num => Math.abs(num));
 
-// const obj = {
-//     'Tom': 18,
-//     'Bob': 24,
-//     'Ivan': 17.
-// }
-// console.log(copyObj({
-//     'Tom': 18,
-//     'Bob': 24,
-//     'Ivan': 17.
-// }));
+    const max = Math.max(...absoluteValues);
+
+    return max;
+};
+
+// const test = [-777, 3, -1, 45, -20];
+
+// console.log(getMaxAbsoluteNumber([]));
