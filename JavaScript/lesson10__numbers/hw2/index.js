@@ -1,14 +1,14 @@
 const getRandomNumbers = (length, start, end) => {
-    const startFixed = Math.abs(+start.toFixed());
-    const endFixed = Math.abs(+end.toFixed());
-    console.log(startFixed);
-    console.log(endFixed);
+    if (start > end) return null;
+    // const arrLength = Array(length);
 
-    let arrLength = Array(length);
-    return arrLength.slice(startFixed, endFixed);
+    // const arrFinish = arrLength.slice(Math.abs(+start.toFixed()), Math.abs(+end.toFixed()));
+
+
+    return Array(length).fill().map(i => Math.floor(Math.random() * (end - start + 1)) + start)
+
+
 }
 
 
-// const test = [5,6,9,4,5.55,8,8.65];
-
-// console.log(getRandomNumbers(5, -1.25, -6,6));
+console.log(getRandomNumbers(5, 1, 3));
