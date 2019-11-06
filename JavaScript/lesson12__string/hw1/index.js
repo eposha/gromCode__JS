@@ -1,24 +1,8 @@
-const splitString = (text, num = 10) => {
+const reverseString = text => {
     if (typeof text !== 'string') return null;
 
-    const arr = [];
-    let startPosition = 0;
-
-    while (true) {
-
-        let chunk = text.substr(startPosition, num);
-
-        if (chunk.length === 0) {
-            break;
-        }
-        if (chunk.length < num) {
-            chunk = chunk + '.'.repeat(num - chunk.length);
-        };
-        arr.push(chunk);
-        startPosition += num;
-    }
-
-    return arr;
+    return text.split('').reverse().join('');
 }
 
-// console.log(splitString('zjdhbvkzdfbvlkdfzbvkdlzfvbkzdfv'));
+
+// console.log(reverseString('Hello world!'));
