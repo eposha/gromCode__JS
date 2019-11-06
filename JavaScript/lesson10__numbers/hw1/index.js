@@ -1,52 +1,10 @@
-const getCustomersList = obj => {
+const getTotalPrice = arr => {
 
-    const copyObj = JSON.parse(JSON.stringify(obj));
-    const arrWithObj = Object.values(copyObj);
-    const objWithKey = Object.keys(copyObj);
+    return '$' + arr.reduce((a, b) => a + b).toFixed(2);
 
-
-    for (let i = 0; i < arrWithObj.length; i++) {
-        arrWithObj[i].id = objWithKey[i];
-    }
-
-
-    return arrWithObj.sort((a, b) => a.age > b.age ? 1 : -1);
 }
 
+// const test = [5.5555, 9.3254, 87, -24, 5, -5];
 
 
-// const customers = {
-//     'customer-id-1': {
-//         name: 'William',
-//         age: 54
-//     },
-//     'customer-id-2': {
-//         name: 'Tom',
-//         age: 17
-//     },
-//     'customer-id-3': {
-//         name: 'Inna',
-//         age: 22
-//     },
-//     'customer-id-4': {
-//         name: 'Ivan',
-//         age: 18
-//     },
-// };
-
-// console.log(getCustomersList(customers));
-
-
-// console.log(customers);
-
-// const obj = {
-//     'Tom': 18,
-//     'Bob': 24,
-//     'Ivan': 17.
-// }
-
-// console.log(copyObj({
-//     'Tom': 18,
-//     'Bob': 24,
-//     'Ivan': 17.
-// }));
+// console.log(getTotalPrice(test));
