@@ -1,13 +1,6 @@
-const countOccurrences = (text, find) => {
-    if (find === '') return null;
-
-    return text.split(find)
-}
-
-
 const countOccurrences = (str, substr) => {
     if (substr === '') return null;
-    return str.split(substr);
+    return str.split(substr).length - 1;
 }
 
 
