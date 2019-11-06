@@ -1,11 +1,5 @@
-const countOccurrences = (str, substr) => {
-    if (substr === '') return null;
-    return str.split(substr).length - 1;
+const cleanTransactionsList = arr => {
+    return arr.filter(i => typeof + i === 'number' && !isNaN(i)).map(i => '$' + (+i).toFixed(2));
 }
 
-
-
-
-// const t = 'qwerty qwerty qwerty qwertyuio qwertyuio qasdfghjk sdhsdfh shsfgh hdjhh xghsfh';
-// console.log()
-// console.log(countOccurrences(t, 'qwerty'));
+// console.log(cleanTransactionsList([' 1.9 ', '16.4', 17, ' 1 dollar ']))
