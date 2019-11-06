@@ -6,10 +6,10 @@ const getParsedIntegersV2 = arr => arr
     .map(a => parseInt(a));
 
 const getParsedFloats = arr => arr
-    .filter(a => Number.parseFloat(a));
+    .map(a => Number.parseFloat(a));
 
 const getParsedFloatsV2 = arr => arr
-    .filter(a => parseFloat(a));
+    .map(a => parseFloat(a));
 
 
 
