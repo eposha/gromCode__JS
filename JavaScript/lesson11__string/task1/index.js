@@ -15,4 +15,4 @@ const splitText = (text, len = 10) => {
 }
 
 
-console.log(splitText(5, 4));
+// console.log(splitText(5, 4));
