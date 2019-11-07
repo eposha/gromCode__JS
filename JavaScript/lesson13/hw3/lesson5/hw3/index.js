@@ -1,4 +1,4 @@
-function increaser(a, index) {
+export function increaser(a, index) {
     if (a > index) {
         a += index;
         return a;
@@ -7,4 +7,4 @@ function increaser(a, index) {
     }
 }
 
-console.log(increaser(4, 7));
+console.log(increaser(5, 5));

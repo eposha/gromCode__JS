@@ -1,4 +1,4 @@
-function findDivCount(a, b, n) {
+export function findDivCount(a, b, n) {
     let result = 0;
     for (let i = a; i <= b; i++) {
         if (i % n == 0) {
@@ -7,3 +7,5 @@ function findDivCount(a, b, n) {
     }
     return result;
 }
+
+// console.log(findDivCount(8, 6, 0))

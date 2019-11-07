@@ -1,4 +1,4 @@
-function compareSums(a, b, c, d) {
+export function compareSums(a, b, c, d) {
     function sum(from, to) {
         let result = 0;
         for (let i = from; i <= to; i++) {
@@ -13,3 +13,5 @@ function compareSums(a, b, c, d) {
         return false;
     }
 }
+
+console.log(compareSums(5, 6, 7, 8))

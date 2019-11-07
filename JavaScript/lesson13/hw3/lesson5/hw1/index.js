@@ -10,4 +10,4 @@ export const getSum = (a, b) => {
     return sum;
 }
 
-console.log(getSum(5, 6));
+// console.log(getSum(6, 3));
