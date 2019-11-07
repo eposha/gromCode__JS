@@ -1,4 +1,6 @@
-function getSum(a, b) {
+export const getSum = (a, b) => {
+
+    if (a > b || typeof a !== 'number' || b !== 'number') return null;
     let sum = 0;
     for (let i = a; i <= b; i++) {
         if (i % 2 == 0) {
@@ -8,4 +10,4 @@ function getSum(a, b) {
     return sum;
 }
 
-// console.log(getSum(5, 25));
+console.log(getSum(5, 6));
