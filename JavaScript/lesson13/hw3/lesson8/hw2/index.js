@@ -8,9 +8,4 @@ export const getAdults = obj => {
     return age;
 }
 
-// result = 'false'
-// if (typeof { name: 'Andrei' } == 'object') {
-//     result = 'true';
-// }
-// console.log(result)
 // console.log(getAdults({ a: 1, b: 2, c: 25 }));
