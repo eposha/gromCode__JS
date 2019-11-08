@@ -11,4 +11,4 @@ export const pickProps = (obj, arr) => {
     return newObj;
 }
 
-console.log(pickProps({ a: 1, b: 2, c: 3 }, ['a', 'c']));
+// console.log(pickProps({ a: 1, b: 2, c: 3 }, ['a', 'c']));

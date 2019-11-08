@@ -1,4 +1,4 @@
-const getCustomersList = obj => {
+export const getCustomersList = obj => {
 
     const copyObj = JSON.parse(JSON.stringify(obj));
     const arrWithObj = Object.values(copyObj);
@@ -18,7 +18,7 @@ const getCustomersList = obj => {
 const customers = {
     'customer-id-1': {
         name: 'William',
-        age: 54
+        age: -54
     },
     'customer-id-2': {
         name: 'Tom',
