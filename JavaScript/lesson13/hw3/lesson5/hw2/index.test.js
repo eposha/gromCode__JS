@@ -11,3 +11,9 @@ it('n should be bigger then 0', () => {
 
     expect(result).toEqual(null);
 });
+
+it('should be prime numbers ', () => {
+    const result = getPrimes(5);
+
+    expect(result).toEqual(null);
+});

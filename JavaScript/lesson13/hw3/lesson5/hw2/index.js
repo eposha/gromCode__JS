@@ -12,4 +12,4 @@
      }
  };
 
- console.log(getPrimes(5));
+ //  console.log(getPrimes(5));
