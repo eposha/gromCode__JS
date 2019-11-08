@@ -1,4 +1,5 @@
 export function compareSums(a, b, c, d) {
+
     function sum(from, to) {
         let result = 0;
         for (let i = from; i <= to; i++) {
@@ -14,4 +15,4 @@ export function compareSums(a, b, c, d) {
     }
 }
 
-console.log(compareSums(5, 6, 7, 8))
+console.log(compareSums(57, 6, 57, 1))

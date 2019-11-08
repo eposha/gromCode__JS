@@ -6,14 +6,14 @@ it('should be a bigger b', () => {
     expect(result).toEqual(null);
 })
 
-it('should be a number', () => {
-    const result = getSum('5');
+it('a shoud be bigger 0', () => {
+    const result = getSum(0, 5);
 
     expect(result).toEqual(null);
 })
 
-it('should be b number', () => {
-    const result = getSum('string');
+it('b shoud be bigger 0', () => {
+    const result = getSum(5, 0);
 
     expect(result).toEqual(null);
 })

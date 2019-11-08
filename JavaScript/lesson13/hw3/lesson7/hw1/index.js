@@ -7,5 +7,7 @@ export const squareArray = array => {
 };
 
 
+
+
 // const someArray = [];
-// console.log(squareArray(someArray));
+console.log(squareArray(5));

@@ -8,4 +8,4 @@ export function findDivCount(a, b, n) {
     return result;
 }
 
-// console.log(findDivCount(8, 6, 0))
+// console.log(findDivCount(1000, 60, -3));
