@@ -1,4 +1,4 @@
-const getPeople = obj => {
+export const getPeople = obj => {
     const array = Object.values(obj)
         .map(i => i.map(i => i.name));
 
@@ -7,7 +7,7 @@ const getPeople = obj => {
 
 
 
-// rooms = {
+// const rooms = {
 //     room1: [
 //         { name: 'room1 name1' },
 //         { name: 'room1 name2' },

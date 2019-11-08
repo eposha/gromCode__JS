@@ -29,11 +29,11 @@ it('should be sorted by age ', () => {
     ])
 });
 
-it('should be sorted by age ', () => {
+it('if age is with minus return this object on zero position of arra', () => {
     const customers = {
         'customer-id-1': {
             name: 'William',
-            age: 54
+            age: -54
         },
         'customer-id-2': {
             name: 'Tom',
@@ -49,15 +49,17 @@ it('should be sorted by age ', () => {
         },
     };
     const result = getCustomersList(customers);
-    let checkAgeByMinus = true;
-    const checkAge = (arr) => {
-        for (let i of result) {
-            if (i.age < 0) {
-                checkAgeByMinus = false;
-                break;
-            }
-        }
-    }
-    checkAge(result);
-    expect(checkAgeByMinus).toEqual(true);
+
+    expect(result).toEqual([
+        { name: 'William', age: -54, id: 'customer-id-1' },
+        { name: 'Tom', age: 17, id: 'customer-id-2' },
+        { name: 'Ivan', age: 18, id: 'customer-id-4' },
+        { name: 'Inna', age: 22, id: 'customer-id-3' }
+    ]);
+});
+
+it('should get empty array', () => {
+    const result = getCustomersList({});
+
+    expect(result).toEqual([]);
 });
