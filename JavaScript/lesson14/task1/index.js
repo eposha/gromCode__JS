@@ -1,6 +1,6 @@
 let message;
 export const sendMessage = name => {
-    console.log(`${name}, ${message}`);
+    console.log(`${name}, ${message} Your Gromcode`);
 };
 
 
