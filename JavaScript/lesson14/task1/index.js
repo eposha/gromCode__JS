@@ -1,13 +1,13 @@
 let message;
-const sendMessage = name => {
+export const sendMessage = name => {
     console.log(`${name}, ${message}`);
 };
 
 
-const setMessage = text => {
+export const setMessage = text => {
     return message = text;
 };
 
-setMessage('Good job! Your Gromcode');
+// setMessage('Good job! Your Gromcode');
 
-sendMessage('Ann');
+// sendMessage('Ann');
