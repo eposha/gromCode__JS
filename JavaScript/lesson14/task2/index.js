@@ -1,4 +1,4 @@
-export const createMessenger = (name, text, sender) => {
+export default function createMessenger(name, text, sender) {
     const sendMessage = name => {
         let names = name;
         return names;
