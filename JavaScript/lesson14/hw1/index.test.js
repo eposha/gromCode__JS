@@ -1,19 +1,31 @@
-import getSquaredOfMinNum from './getMinSquaredNumber';
+import { add, decrease, reset, getMemo } from './index';
 
-it('should get square of min number of array', () => {
-    const result = getSquaredOfMinNum([-777, 3, -2, 6, 45, -20]);
-
-    expect(result).toEqual(4);
+it('should be sum', () => {
+    add(17);
+    const result = getMemo();
+    expect(result).toEqual(17);
 });
 
-it('should get array with min length 1', () => {
-    const result = getSquaredOfMinNum([]);
-
-    expect(result).toEqual(null);
+it('should be sum', () => {
+    add(-15);
+    const result = getMemo();
+    expect(result).toEqual(2);
 });
 
-it('should get array only', () => {
-    const result = getSquaredOfMinNum('sdfgsdfg');
+it('should be decreas', () => {
+    decrease(-15);
+    const result = getMemo();
+    expect(result).toEqual(17);
+});
 
-    expect(result).toEqual(null);
+it('should be decreas', () => {
+    decrease(5);
+    const result = getMemo();
+    expect(result).toEqual(12);
+});
+
+it('should be reset result (result == 0)', () => {
+    reset();
+    const result = getMemo();
+    expect(result).toEqual(0);
 });
