@@ -1,21 +1,49 @@
-export default function createMessenger(name, text, sender) {
+export default function createMessenger() {
+    let message = 'Just learn it!';
+    let sender = 'Gromcode';
+
     const sendMessage = name => {
-        let names = name;
-        return names;
-    };
+        console.log(`${name}, ${message} Your ${sender}`);
+    }
 
     const setMessage = text => {
-        let texts = text;
-        return texts;
-    };
+        message = text;
+    }
 
-    const setSender = sender => {
-        let senders = sender;
-        return senders;
-    };
+    const setSender = text => {
+        sender = text;
+    }
 
-    console.log(`${sendMessage(name)}, ${setMessage(text)} ${setSender(sender)}`)
-};
+    return {
+        sendMessage,
+        setMessage,
+        setSender,
+    }
+}
 
 
-createMessenger('Ann', 'Just learn it!', 'Your Gromcode');
+
+
+
+
+// export default function createMessenger(name, text, sender) {
+//     const sendMessage = name => {
+//         let names = name;
+//         return names;
+//     };
+
+//     const setMessage = text => {
+//         let texts = text;
+//         return texts;
+//     };
+
+//     const setSender = sender => {
+//         let senders = sender;
+//         return senders;
+//     };
+
+//     console.log(`${sendMessage(name)}, ${setMessage(text)} ${setSender(sender)}`)
+// };
+
+
+// createMessenger('Ann', 'Just learn it!', 'Your Gromcode');
