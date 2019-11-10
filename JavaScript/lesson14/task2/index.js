@@ -23,9 +23,6 @@ export default function createMessenger() {
 
 
 
-
-
-
 // export default function createMessenger(name, text, sender) {
 //     const sendMessage = name => {
 //         let names = name;
