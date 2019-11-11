@@ -1,36 +1,26 @@
 export const createCalculator = () => {
     let count = 0;
 
-    const add = num => {
-        count += num;
-    };
-
-    const decrease = num => {
-        count -= num;
-    };
-
-    const reset = () => {
-        count = 0;
-    };
-
-    const add = num => {
-        count += num;
-    };
-
-    const getDemo = () => {
-        return count;
-    };
-
     return {
-        getDemo,
-        add,
-        reset,
-        add,
+        add: num => {
+            count += num;
+        },
+
+        decrease: num => {
+            count -= num;
+        },
+
+        reset: () => {
+            count = 0;
+        },
+        getDemo: () => {
+            console.log(count);
+        },
     }
 }
 
-const result = createCalculator();
-console.log(result);
-result.add(5);
+// const result = createCalculator();
+// console.log(result);
+// result.decrease(5);
 
-console.log(getDemo())
+// result.getDemo();

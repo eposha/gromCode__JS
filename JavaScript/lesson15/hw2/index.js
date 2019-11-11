@@ -1,11 +1,22 @@
 const createLogger = () => {
 
-    const warnText = '';
-    const errorText = '';
-    const logText = '';
+    const result = [];
 
     const warn = text => {
-        warnText = text;
+        result.push({
+            message: text,
+            dateTime: newDate(),
+            type: text,
+
+        })
+    }
+    const warn = text => {
+        result.push({
+            message: text,
+            dateTime: newDate(),
+            type: text,
+
+        })
     }
 
     const error = text => {
