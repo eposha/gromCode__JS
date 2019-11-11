@@ -1,31 +1,19 @@
-import { add, decrease, reset, getMemo } from './index';
+// import getSum, { getSquaredNumbers, getOddNumbers } from './calculator.js';
 
-it('should be sum', () => {
-    add(17);
-    const result = getMemo();
-    expect(result).toEqual(17);
-});
+// it('should get squared numbers', () => {
+//     const result = getSquaredNumbers([1, 2, 3]);
 
-it('should be sum', () => {
-    add(-15);
-    const result = getMemo();
-    expect(result).toEqual(2);
-});
+//     expect(result).toEqual([1, 4, 9]);
+// });
 
-it('should be decreas', () => {
-    decrease(-15);
-    const result = getMemo();
-    expect(result).toEqual(17);
-});
+// it('should get odd numbers only', () => {
+//     const result = getOddNumbers([1, 2, 3, 4, 5]);
 
-it('should be decreas', () => {
-    decrease(5);
-    const result = getMemo();
-    expect(result).toEqual(12);
-});
+//     expect(result).toEqual([1, 3, 5]);
+// });
 
-it('should be reset result (result == 0)', () => {
-    reset();
-    const result = getMemo();
-    expect(result).toEqual(0);
-});
+// it('should get sum of numbers', () => {
+//     const result = getSum(1, 2);
+
+//     expect(result).toEqual(3);
+// });

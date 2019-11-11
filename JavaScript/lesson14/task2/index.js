@@ -22,9 +22,9 @@ export default function createMessenger() {
 };
 
 
-// const result = createMessenger();
+const result = createMessenger();
 
-// console.log(result);
+console.log(result);
 
 // result.setMessage('Hi, Andrei');
 // result.sendMessage('Ivan');
