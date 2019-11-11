@@ -1,31 +1,35 @@
-// import { add, decrease, reset, getMemo } from './index';
+import { createLogger } from './index';
 
-// it('should be sum', () => {
-//     add(17);
-//     const result = getMemo();
-//     expect(result).toEqual(17);
-// });
+it('should be array', () => {
+    const log1 = createLogger();
 
-// it('should be sum', () => {
-//     add(-15);
-//     const result = getMemo();
-//     expect(result).toEqual(2);
-// });
+    log1.warn('Are you Andrei?');
+    log1.error('Oops, we think that you are not Andrei');
+    log1.log('Sorry, we made a mistake, YOU are ANDREI!!!');
 
-// it('should be decreas', () => {
-//     decrease(-15);
-//     const result = getMemo();
-//     expect(result).toEqual(17);
-// });
+    const types = Array.isArray(log1.getRecords());
 
-// it('should be decreas', () => {
-//     decrease(5);
-//     const result = getMemo();
-//     expect(result).toEqual(12);
-// });
+    expect(types).toEqual(true);
+});
 
-// it('should be reset result (result == 0)', () => {
-//     reset();
-//     const result = getMemo();
-//     expect(result).toEqual(0);
-// });
+it('should be empty array', () => {
+    const log1 = createLogger();
+
+    log1.warn('Are you Andrei?');
+    log1.error('Oops, we think that you are not Andrei');
+
+    const result = log1.getRecords('log');
+
+    expect(result).toEqual([]);
+});
+
+it('should be array with type warn', () => {
+    const log1 = createLogger();
+
+    log1.warn('Are you Andrei?');
+    log1.error('Oops, we think that you are not Andrei');
+
+    const result = log1.getRecords('warn')[0].type;
+
+    expect(result).toEqual('warn');
+});
