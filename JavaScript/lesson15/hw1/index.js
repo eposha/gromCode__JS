@@ -13,7 +13,7 @@ export const createCalculator = () => {
         reset: () => {
             count = 0;
         },
-        getDemo: () => {
+        getMemo: () => {
             return count;
         },
     }
