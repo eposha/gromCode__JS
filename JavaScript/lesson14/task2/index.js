@@ -19,7 +19,15 @@ export default function createMessenger() {
         setMessage,
         setSender,
     }
-}
+};
+
+
+// const result = createMessenger();
+
+// console.log(result);
+
+// result.setMessage('Hi, Andrei');
+// result.sendMessage('Ivan');
 
 
 

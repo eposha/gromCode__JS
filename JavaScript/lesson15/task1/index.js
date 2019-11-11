@@ -1,13 +1,19 @@
-let message = 'Just learn it!';
-export const sendMessage = name => {
-    console.log(`${name}, ${message} Your Gromcode`);
-};
+// counter
+
+export const makeCounter = () => {
+    let count = 0;
+    return function() {
+        return count++;
+    }
+}
+
+// const counter1 = makeCounter();
+// const counter2 = makeCounter();
+
+// console.log(counter1());
+// console.log(counter1());
+// console.log(counter1());
 
 
-export const setMessage = text => {
-    message = text;
-};
-
-// setMessage('Good job! Your Gromcode');
-
-// sendMessage('Ann');
+// console.log(counter2());
+// console.log(counter2());
