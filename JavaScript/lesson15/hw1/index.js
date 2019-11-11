@@ -19,8 +19,14 @@ export const createCalculator = () => {
     }
 }
 
-// const result = createCalculator();
-// console.log(result);
-// result.decrease(5);
+// let counter1 = createCalculator();
+// count1 = counter1.add(5);
+// count1 = counter1.decrease(1);
+// count1 = counter1.getDemo();
+// console.log(count1);
 
-// result.getDemo();
+// let counter2 = createCalculator();
+// count2 = counter2.add(8);
+// count2 = counter2.decrease(1);
+// count2 = counter2.getDemo();
+// console.log(count2);
