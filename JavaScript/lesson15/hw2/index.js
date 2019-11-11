@@ -17,6 +17,6 @@ const createLogger = () => {
     }
 
     const getRecords = () => {
-        if ()
+        // if ()
     }
 }
