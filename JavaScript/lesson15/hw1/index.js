@@ -14,7 +14,7 @@ export const createCalculator = () => {
             count = 0;
         },
         getDemo: () => {
-            console.log(count);
+            return count;
         },
     }
 }
