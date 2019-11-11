@@ -29,8 +29,8 @@ export const createLogger = () => {
 
             })
         },
-        getRecords: type => {
 
+        getRecords: type => {
             if (type == undefined) {
                 return result.sort((a, b) => b.dateTime - a.dateTime);
             } else {
