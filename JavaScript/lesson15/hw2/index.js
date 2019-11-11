@@ -53,3 +53,14 @@ export const createLogger = () => {
 // log1.error('Oops, we think that you are not Andrei');
 // log1.log('Sorry, we made a mistake, YOU are ANDREI!!!');
 // console.log(log1.getRecords('warn'));
+
+
+// const log2 = createLogger();
+// // console.log(log1);
+// log2.warn('Are you Ivan?');
+// log2.error('Ok, we will check it');
+// log2.log('Sorry, we checked your information, YOU are not Ivan!!!');
+// console.log(log2.getRecords('warn'));
+
+
+// console.log(log1.getRecords('warn'));
