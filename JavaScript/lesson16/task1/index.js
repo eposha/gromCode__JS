@@ -1,8 +1,8 @@
-export const createArrayOfFunctions = (num = 'empty') => {
+export const createArrayOfFunctions = (num) => {
     let arr = [];
 
 
-    if (num === 'empty') {
+    if (num == undefined) {
         return arr;
     } else if (typeof num !== 'number') {
         return null;
@@ -13,8 +13,8 @@ export const createArrayOfFunctions = (num = 'empty') => {
             return i;
         }
     }
-    arr.length = num;
+    // arr.length = num;
     return arr;
 };
 
-// console.log(createArrayOfFunctions(9));
+console.log(createArrayOfFunctions());
