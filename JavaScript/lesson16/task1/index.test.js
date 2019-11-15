@@ -23,3 +23,16 @@ it('should be length 8', () => {
 
     expect(result).toEqual(8);
 });
+
+it('should be type of arguments function', () => {
+    const result = createArrayOfFunctions(8);
+    const check = true;
+    for (let i of result) {
+        if (typeof i !== 'function') {
+            check = false;
+            break;
+        }
+    }
+
+    expect(check).toEqual(true);
+});

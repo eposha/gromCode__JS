@@ -1,19 +1,18 @@
 export const createArrayOfFunctions = (num) => {
-    let arr = [];
 
-
-    if (num == undefined) {
+    if (num == undefined)
         return arr;
-    } else if (typeof num !== 'number') {
+    if (typeof num !== 'number')
         return null;
-    };
+
+    let arr = [];
 
     for (let i = 0; i < num; i++) {
         arr[i] = () => {
             return i;
         }
     }
-    // arr.length = num;
+
     return arr;
 };
 
