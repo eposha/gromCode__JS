@@ -17,3 +17,9 @@ it('should be null', () => {
 
     expect(result).toEqual(null);
 });
+
+it('should be length 8', () => {
+    const result = createArrayOfFunctions(8).length;
+
+    expect(result).toEqual(8);
+});

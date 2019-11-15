@@ -8,13 +8,13 @@ export const createArrayOfFunctions = (num = 'empty') => {
         return null;
     };
 
-    for (let i = 0; i <= num; i++) {
+    for (let i = 0; i < num; i++) {
         arr[i] = () => {
             return i;
         }
     }
     arr.length = num;
-    return arr.length;
+    return arr;
 };
 
 // console.log(createArrayOfFunctions(9));
