@@ -1,5 +1,6 @@
 export const createArrayOfFunctions = (num = 'empty') => {
     let arr = [];
+    arr.length = num;
 
     if (num === 'empty') {
         return arr;
@@ -15,4 +16,4 @@ export const createArrayOfFunctions = (num = 'empty') => {
     return arr;
 };
 
-// console.log(createArrayOfFunctions(9)[4]());
+// console.log(createArrayOfFunctions(9)[9]());
