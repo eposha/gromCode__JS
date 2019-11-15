@@ -8,7 +8,7 @@ export const createArrayOfFunctions = (num = 'empty') => {
         return null;
     };
 
-    for (let i = 0; i <= num; i++) {
+    for (let i = 0; i < num; i++) {
         arr[i] = () => {
             return i;
         }
