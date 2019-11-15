@@ -17,4 +17,4 @@ export const createArrayOfFunctions = (num) => {
     return arr;
 };
 
-console.log(createArrayOfFunctions());
+// console.log(createArrayOfFunctions());
