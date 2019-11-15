@@ -1,13 +1,14 @@
-'export default
 var foo = 1;
 
-function bar() {
+export default function bar() {
     if (!foo) {
-        var foo = 10;
+        let foo = 10;
     }
 
     return foo;
 }
 
 var foo = bar();
-'
+
+
+// console.log(foo);
