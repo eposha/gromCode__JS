@@ -1,15 +1,19 @@
 const event = {
     message: 'Welcome to the party!',
     guests: [
-        { name: 'Tom', age: 16, email: 'example@server.com' },
-        { name: 'John', age: 18, email: 'example@server.com' }
+        { name: 'John', age: 18, email: 'example@server.com' },
+        { name: 'Tom', age: 16, email: 'exa@server.com' },
+        { name: 'Bob', age: 62, email: 'exa@server.com' },
+        { name: 'John', age: 6, email: 'exa@server.com' },
+        { name: 'Ann', age: 21, email: 'exa@server.com' },
     ],
     getInvitations() {
-        let filterAge = this.guests.filter(i => i.age >= 18);
-
-        for (let i of filterAge) {
-            return i;
-        }
+        return this.guests.filter(i => i.age >= 18).map(i => {
+            return {
+                email: `${i.email}`,
+                message: `Dear ${i.name}! ${this.message}`
+            }
+        })
     }
 }
 
