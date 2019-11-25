@@ -8,15 +8,15 @@ const event = {
         { name: 'Ann', age: 21, email: 'exa@server.com' },
     ],
     getInvitations() {
-        return this.guests.filter(i => i.age >= 18).map(i => {
-            return {
-                email: `${i.email}`,
-                message: `Dear ${i.name}! ${this.message}`
-            }
-        })
+        return this.guests
+            .filter(i => i.age >= 18)
+            .map(({ name, email }) => ({
+                email: `${email}`,
+                message: `Dear ${name}! ${this.message}`
+            }));
     }
 }
 
-// console.log(event.getInvitations());
+console.log(event.getInvitations());
 
-export { event };
+// export { event };
