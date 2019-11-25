@@ -13,7 +13,7 @@ const timer = {
         }, 5000);
     },
     timerId() {
-        clearInterval(this.timerId);
+        clearTimeout(this.timerId);
     },
     getTime() {
         let checkLength = this.secondsPassed < 10 ? '0' + this.secondsPassed : this.secondsPassedl
