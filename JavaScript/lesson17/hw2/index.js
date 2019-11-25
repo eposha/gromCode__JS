@@ -12,7 +12,7 @@ const timer = {
         console.log(this.secondsPassed);
         setTimeout(() => {
             this.startTimer();
-        }, 1000)
+        }, 5000)
     },
     stopTimer() {
         clearTimeout(this.startTimer)
