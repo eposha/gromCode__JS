@@ -5,9 +5,8 @@ const event = {
         { name: 'John', age: 18, email: 'example@server.com' }
     ],
     getInvitations() {
-        let filterAge = this.guests.filter(i => i.age >= 18).map(i => {
-            return i;
-        });
+        let filterAge = this.guests.filter(i => i.age >= 18);
+
         for (let i of filterAge) {
             return i;
         }
