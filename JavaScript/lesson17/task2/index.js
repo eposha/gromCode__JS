@@ -9,4 +9,6 @@ const callbackPrompt = {
     }
 };
 
-callbackPrompt.showDefferedPrompt(2500);
+// callbackPrompt.showDefferedPrompt(2500);
+
+export { callbackPrompt };
