@@ -1,11 +1,14 @@
-var a = 17;
+const user = {
+    firstName: 'John',
+    lastName: 'Doe',
+    getFullName() {
+        return this.firstName + ' ' + this.lastName;
+    },
+    setFullName(fullName) {
+        this.firstName = fullName.split(' ')[0];
+        this.lastName = fullName.split(' ')[1];
+    }
+};
 
-if (a) {
 
-    let a = 1;
-
-    console.log(a);
-
-}
-
-console.log(a);
+export { user };
