@@ -5,14 +5,11 @@ const timer = {
         if (this.secondsPassed == 60) {
             this.secondsPassed = 0;
             this.minsPassed += 1;
-            console.log(this.minsPassed);
         };
-
         this.secondsPassed += 5;
-        console.log(this.secondsPassed);
-        setTimeout(() => {
+        let forStop = setTimeout(() => {
             this.startTimer();
-        }, 5000)
+        }, 5000);
     },
     stopTimer() {
         clearTimeout(this.startTimer)
@@ -28,6 +25,6 @@ const timer = {
 };
 
 
-// timer.getTime();
+// console.log(timer.getTime());
 
 export { timer };
