@@ -11,11 +11,12 @@ const timer = {
             }
         }, 5000);
     },
-    stopTimer() {
-        clearInterval(this.stopTimer);
-    },
+
     getTime() {
         return `${this.minsPassed}:${this.secondsPassed < 10 ? '0' + this.secondsPassed : this.secondsPassed}`;
+    },
+    stopTimer() {
+        clearInterval(this.stopTimer);
     },
     resetTimer() {
         this.minsPassed = 0;
