@@ -1,9 +1,9 @@
-function bind(func, context) {
+export function bind(fn, context) {
     let bindArgs = [].slice.call(arguments, 2);
     return function() {
-        let fnArgs = [].slice.call(arguments);
-        return func.apply(context, bindArgs.concat(fnArgs));
-    };
-}
 
-export { bind };
+        let fnArgs = [].slice.call(arguments);
+
+        return fn.apply(context, bindArgs.concat(fnArgs));
+    };
+};
