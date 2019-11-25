@@ -1,29 +1,33 @@
-// const timer = {
-//     secondsPassed: 0,
-//     minsPassed: 0,
-//     startTimer() {
-//         let start = true;
-//         while (start) {
-//             setTimeout(this.secondsPassed += 5, 5000);
-//             if (this.secondsPassed.length = 1) {
-//                 this.secondsPassed.push(0);
-//             }
-//         }
-//     }
-// }
+const timer = {
+    secondsPassed: 0,
+    minsPassed: 0,
+    startTimer() {
+        if (this.secondsPassed == 60) {
+            this.secondsPassed = 0;
+            this.minsPassed += 1;
+            console.log(this.minsPassed);
+        };
 
-
-const test = {
-    first: 0,
-    start() {
-        while (true) {
-            setTimeout(() => {
-                this.first += 5;
-                console.log(this.first);
-            }, 5000);
-        }
-    }
+        this.secondsPassed += 5;
+        console.log(this.secondsPassed);
+        setTimeout(() => {
+            this.startTimer();
+        }, 1000)
+    },
+    stopTimer() {
+        clearTimeout(this.startTimer)
+    },
+    getTime() {
+        let checkLength = this.secondsPassed < 10 ? '0' + this.secondsPassed : this.secondsPassed;
+        return `${this.minsPassed}:${checkLength}`;
+    },
+    resetTimer() {
+        this.minsPassed = 0;
+        this.secondsPassed = 0;
+    },
 };
 
 
-console.log(test.start());
+// timer.getTime();
+
+export { timer };
