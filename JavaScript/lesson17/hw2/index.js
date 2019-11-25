@@ -1,27 +1,27 @@
-const timer = {
+let timer = {
     secondsPassed: 0,
     minsPassed: 0,
-    stopTimer: 0,
+    timerID: 0,
     startTimer() {
-        this.stopTimer = setInterval(() => {
+        this.timerID = setInterval(() => {
             this.secondsPassed += 5
             if (this.secondsPassed === 60) {
-                this.minsPassed += 1;
                 this.secondsPassed = 0;
+                this.minsPassed++
             }
         }, 5000);
-    },
 
+    },
+    stopTimer() {
+        clearInterval(this.timerID)
+    },
     getTime() {
         return `${this.minsPassed}:${this.secondsPassed < 10 ? '0' + this.secondsPassed : this.secondsPassed}`;
     },
-    stopTimer() {
-        clearInterval(this.stopTimer);
-    },
     resetTimer() {
-        this.minsPassed = 0;
         this.secondsPassed = 0;
-    },
+        this.minsPassed = 0;
+    }
 }
 
-export { timer };
+export { timer }
