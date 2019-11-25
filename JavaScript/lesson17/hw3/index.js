@@ -1,11 +1,5 @@
-var a = 17;
+const bind = (func, context, [arg1], [arg2]) => {
+    func.call(context);
+};
 
-if (a) {
-
-    let a = 1;
-
-    console.log(a);
-
-}
-
-console.log(a);
+export { bind };
