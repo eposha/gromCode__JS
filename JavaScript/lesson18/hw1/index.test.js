@@ -1,19 +1,13 @@
-// import getSum, { getSquaredNumbers, getOddNumbers } from './calculator.js';
+// import { createLogger } from './index';
 
-// it('should get squared numbers', () => {
-//     const result = getSquaredNumbers([1, 2, 3]);
+// it('should be array', () => {
+//     const log1 = createLogger();
 
-//     expect(result).toEqual([1, 4, 9]);
-// });
+//     log1.warn('Are you Andrei?');
+//     log1.error('Oops, we think that you are not Andrei');
+//     log1.log('Sorry, we made a mistake, YOU are ANDREI!!!');
 
-// it('should get odd numbers only', () => {
-//     const result = getOddNumbers([1, 2, 3, 4, 5]);
+//     const types = Array.isArray(log1.getRecords());
 
-//     expect(result).toEqual([1, 3, 5]);
-// });
-
-// it('should get sum of numbers', () => {
-//     const result = getSum(1, 2);
-
-//     expect(result).toEqual(3);
+//     expect(types).toEqual(true);
 // });
