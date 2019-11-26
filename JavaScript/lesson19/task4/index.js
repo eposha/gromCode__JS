@@ -5,14 +5,19 @@ function User(name, age) {
 
 User.prototype.sayHi = function() {
     console.log(`Hi, I am ${this.name}`);
-}
+};
 
-const user1 = new User('Tom', 17);
+User.prototype.requestNewPhoto = function() {
+    console.log(`New photo request was sent for ${this.name}`);
+};
 
-// console.log(user1);
+User.prototype.setAge = function(age) {
+    if (age < 0) return false;
+    this.age = age;
+    if (age >= 25) {
+        console.log(`New photo request was sent for ${this.name}`);
+    }
+    return age;
+};
 
-// user1.sayHi();
-
-const user2 = new User('Bob', 21);
-
-user2.sayHi();
+export { User };
