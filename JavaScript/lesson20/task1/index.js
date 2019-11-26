@@ -26,7 +26,7 @@ class User {
     };
 };
 
-export { user };
+export { User };
 
 // const user1 = new User('Tom', 17);
 // const user2 = new User('Bob', 34);
