@@ -10,8 +10,8 @@ class Order {
     }
 
     checkPrice() {
-        if (this.price < 1000) return true;
-        return true;
+        if (this.price > 1000) return true;
+        return false;
     }
 
     confirmOrder() {
