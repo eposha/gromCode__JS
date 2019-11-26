@@ -1,14 +1,14 @@
-const user = {
-    firstName: 'John',
-    lastName: 'Doe',
-    getFullName() {
-        return this.firstName + ' ' + this.lastName;
-    },
-    setFullName(fullName) {
-        this.firstName = fullName.split(' ')[0];
-        this.lastName = fullName.split(' ')[1];
+function spy(func) {
+
+    function wrapper(...args) {
+        wrapper.calls.push(args);
+        return func.apply(this, arguments);
     }
+
+    wrapper.calls = [];
+
+    return wrapper;
 };
 
 
-export { user };
+export { spy }
