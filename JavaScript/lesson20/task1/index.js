@@ -22,7 +22,7 @@ class User {
     };
 
     static createEmpty() {
-        return new User('', undefined)
+        return new User('', null)
     };
 };
 
