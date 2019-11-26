@@ -11,6 +11,7 @@ class Order {
 
     checkPrice() {
         if (this.price > 1000) return true;
+        return;
     }
 
     confirmOrder() {
