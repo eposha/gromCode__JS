@@ -20,7 +20,8 @@ class Order {
     }
 
     isValidType() {
-
+        if (this.type == 'Buy') return true;
+        if (this.type == 'Sale') return false;
     }
 };
 
