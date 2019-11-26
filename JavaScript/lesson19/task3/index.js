@@ -1,10 +1,14 @@
-function sumOfSquares() {
-    return [...arguments].map(i => i ** 2).reduce((prev, current) => {
-        return prev + current
-    });
+const user = {
+    firstName: 'Tom',
+    lastName: 'Doe',
+    get fullName() {
+        return `${this.firstName} ${this.lastName}`;
+    },
+    set fullName(value) {
+        const [firstName, lastName] = value.split(' ');
+        this.firstName = firstName;
+        this.lastName = lastName;
+    },
 };
 
-
-// console.log(sumOfSquares(5, 5));
-
-export { sumOfSquares }
+export default user;
