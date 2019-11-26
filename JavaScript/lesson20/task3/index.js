@@ -12,7 +12,7 @@ class Wallet {
     }
 
     withdraw(amount) {
-        if (amount > this._balance) {
+        if (amount > this.balance) {
             console.log('Not enouhg funds');
             return;
         };
