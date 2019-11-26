@@ -1,14 +1,14 @@
 class Wallet {
     constructor() {
-        this._balance = 0;
+        this.balance = 0;
     }
 
     getBalance() {
-        return this._balance;
+        return this.balance;
     }
 
     deposit(amount) {
-        this._balance += amount;
+        this.balance += amount;
     }
 
     withdraw(amount) {
