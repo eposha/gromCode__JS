@@ -19,14 +19,16 @@ class Wallet {
 
         this.balance -= amount;
     }
-}
+};
 
-const wallet1 = new Wallet();
+export { Wallet };
+
+// const wallet1 = new Wallet();
 
 
-console.log(wallet1.getBalance());
-wallet1.deposit(45);
-console.log(wallet1.getBalance());
-wallet1.withdraw(34);
-console.log(wallet1.getBalance());
-wallet1.withdraw(25);
+// console.log(wallet1.getBalance());
+// wallet1.deposit(45);
+// console.log(wallet1.getBalance());
+// wallet1.withdraw(34);
+// console.log(wallet1.getBalance());
+// wallet1.withdraw(25);
