@@ -4,7 +4,7 @@ class User {
         this._name = name;
         this._sessionId = sessionId;
     };
-}
+};
 
 class UserRepository extends User {
     constructor(users) {
@@ -12,7 +12,7 @@ class UserRepository extends User {
     };
 
     getUserNames() {
-        return this._name;
+        return this._users;
     };
 
     getUserIds() {
@@ -22,6 +22,6 @@ class UserRepository extends User {
     getUserNameById(userId) {
         if (this._id == userId[id]) return userId[name];
     }
-}
+};
 
 export { User, UserRepository }
