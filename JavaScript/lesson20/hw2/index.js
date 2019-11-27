@@ -21,7 +21,7 @@ class UserRepository {
 
     getUserNameById(userId) {
         let findById = this._users.find(i => i._id === userId);
-        return findById ? [] : findById._name;
+        return findById === undefined ? [] : findById._name;
     };
 };
 
