@@ -1,4 +1,4 @@
-const todo = [
+const todos = [
     { text: 'Buy milk', done: false },
     { text: 'Pick up Tom from airport', done: false },
     { text: 'Visit party', done: false },
@@ -30,4 +30,4 @@ const renderListItems = listItems => {
     listElem.append(...listItemsElems);
 };
 
-renderListItems(todo);
+renderListItems(todos);
