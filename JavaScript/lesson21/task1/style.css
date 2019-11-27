@@ -55,12 +55,10 @@ body {
 
 .btn {
     margin-left: 16px;
-    font-weight: 700;
     height: 32px;
     min-width: 64px;
     border-radius: 8px;
     border: 3px solid #ccc;
-    background-color: #fff;
     cursor: pointer;
     outline: none;
 }
