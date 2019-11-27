@@ -20,9 +20,8 @@ class UserRepository {
     };
 
     getUserNameById(userId) {
-        let filterById = this._users
-            .filter(i => i._id === `${userId}`);
-        return filterById[0]._name;
+        let findById = this._users.find(i => i._id === userId);
+        return findById ? [] : findById._name;
     };
 };
 
