@@ -1,8 +1,8 @@
 class User {
     constructor(id, name, sessionId) {
-        this._id = id;
-        this._name = name;
-        this._sessionId = sessionId;
+        this._id = `${id}`;
+        this._name = `${name}`;
+        this._sessionId = `${sessionId}`;
     };
 };
 
@@ -19,8 +19,7 @@ class UserRepository extends User {
         return this._id;
     };
 
-    getUserNameById(userId) {
-        if (this._id == userId[id]) return userId[name];
+    getUserNameById(userId) {;
     }
 };
 
