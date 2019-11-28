@@ -60,7 +60,6 @@ const renderListItems = listItems => {
         const listItemElem = document.createElement('li');
         listItemElem.classList.add('list__item');
 
-        // console.log(listItemElem.innerHTML = inputElem.value);
         const checkboxItem = document.createElement('input');
         checkboxItem.classList.add('list__item-checkbox');
         checkboxItem.setAttribute('type', 'checkbox');
