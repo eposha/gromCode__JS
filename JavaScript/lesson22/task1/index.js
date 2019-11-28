@@ -54,3 +54,4 @@ const clearEventList = () => {
 };
 const pushClear = clearEventList;
 clearBtn.addEventListener('click', pushClear);
+5
