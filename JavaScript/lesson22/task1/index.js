@@ -37,7 +37,6 @@ attatchBtn.addEventListener('click', pushAttatch);
 
 
 const removeEventList = () => {
-    console.log('remove');
     divElem.removeEventListener('click', logGreenDiv, true);
     divElem.removeEventListener('click', logGreyDiv);
 
