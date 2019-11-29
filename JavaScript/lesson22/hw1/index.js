@@ -1,9 +1,10 @@
 const todos = [
-    { text: 'Buy milk', done: false, id: 1 },
-    { text: 'Pick up Tom from airport', done: false, id: 2 },
-    { text: 'Visit party', done: false, id: 3 },
-    { text: 'Visit doctor', done: true, id: 4 },
-    { text: 'Buy meat', done: true, id: 5 },
+    { text: 'Buy milk', done: false, id: 0, date: new Date(2015, 9, 1, 0, 0, 0, 0) },
+    { text: 'Pick up Tom from airport', done: false, id: 1, date: new Date(2016, 9, 1, 0, 0, 0, 0) },
+    { text: 'Visit party', done: false, id: 2, date: new Date(2017, 9, 1, 0, 0, 0, 0) },
+    { text: 'Buy meat', done: true, id: 4, date: new Date(2018, 9, 1, 0, 0, 0, 0) },
+    { text: 'Visit doctor', done: true, id: 3, date: new Date(2019, 9, 1, 0, 0, 0, 0) },
+
 ];
 
 
@@ -16,6 +17,7 @@ const renderListItems = listItems => {
     const listElem = document.querySelector('.list');
 
     const listItemsElems = listItems
+        .sort((a, b) => a.date - b.date)
         .sort((a, b) => a.done - b.done).map(({ text, done, id }) => {
 
             const listItemElem = document.createElement('li');
