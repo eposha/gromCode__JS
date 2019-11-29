@@ -63,6 +63,7 @@ const renderListItems = listItems => {
         const checkboxItem = document.createElement('input');
         checkboxItem.classList.add('list__item-checkbox');
         checkboxItem.setAttribute('type', 'checkbox');
+        console.log(checkboxItem);
 
 
         listItemElem.prepend(checkboxItem, inputValue);
@@ -70,6 +71,8 @@ const renderListItems = listItems => {
         listElem.prepend(listItemElem);
 
         inputElem.value = '';
+
+        // console.log(listItemElem);
     };
 
     btnElem.addEventListener('click', creatLiWithWork);
