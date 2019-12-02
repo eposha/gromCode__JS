@@ -1,6 +1,5 @@
 const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
-
 const studentsBirthDays = students => {
     let result = {};
 
