@@ -1,24 +1,10 @@
-const getGreenwichTime = (date) => {
-    const minute = date.getMinutes();
-    const hours = date.getHours();
-    const result = `${hours}:${minute}`;
+const weekDay = ['Mo', 'Tu', 'We', 'Th', 'Fr', 'St', 'Su'];
 
-    return result;
+const getDayOfWeek = (date, days) => {
+    const day = new Date(date).getDate();
+    const dateInFuture = new Date(date).setDate(day + days);
+
+    return weekDay[new Date(dateInFuture).getDay()];
 };
 
-export { getGreenwichTime };
-
-// console.log(getGreenwichTime(new Date()));
-
-
-
-// const weekDay = ['Sun', 'Monday', 'Thuesday', 'Wednesday'];
-
-// const getDayOfWeek = (date, days) => {
-//     const day = new Date(date).getDate();
-//     const dateInFuture = new Date(date).setDate(day + days);
-
-//     return weekDay[new Date(dateInFuture).getDay()];
-// };
-
-// console.log(getDayOfWeek(new Date(2019, 0, 1), 14));
+export { getDayOfWeek };

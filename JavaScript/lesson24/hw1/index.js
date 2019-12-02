@@ -1,0 +1,1 @@
+const daysOfWeek = ['Sun']
