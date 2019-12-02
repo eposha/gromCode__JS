@@ -9,10 +9,10 @@ const getDiff = (startDate, endDate) => {
     const endDateMinutes = new Date(endDate).getUTCMinutes();
     const endDateSecond = new Date(endDate).getUTCSeconds();
 
-    return `${Math.abs(startDateDays - endDateDays)}d ${Math.abs(startDateHours - endDateHours)}h ${Math.abs(startDateMinutes - endDateMinutes)}m ${Math.abs(startDateSecond - endDateSecond)}s`
+    return `${Math.abs(endDateDays - startDateDays)}d ${Math.abs(endDateHours - startDateHours)}h ${Math.abs(endDateMinutes - startDateMinutes)}m ${Math.abs(endDateSecond - startDateSecond)}s`
 };
 
 
-// console.log(getDiff(new Date(2012, 11, 10, 10), new Date(2011, 11)));
+console.log(getDiff(new Date(2012, 11, 10, 10), new Date(2011, 11)));
 
-export { getDiff };
+// export { getDiff };
