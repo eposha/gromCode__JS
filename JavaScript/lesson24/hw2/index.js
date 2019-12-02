@@ -1,6 +1,6 @@
 const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
-const students = [{ name: 'Tom', birthDay: '01/15/2010' }, { name: 'Bob', birthDay: '5/8/2010' }, { name: 'John', birthDay: '01/10/2010' }];
+// const students = [{ name: 'Tom', birthDay: '01/15/2010' }, { name: 'Bob', birthDay: '5/8/2010' }, { name: 'John', birthDay: '01/10/2010' }];
 
 const studentsBirthDays = students => {
     let result = {};
@@ -25,6 +25,6 @@ const studentsBirthDays = students => {
     return result;
 };
 
-console.log(studentsBirthDays(students));
+// console.log(studentsBirthDays(students));
 
-// export { studentsBirthDays };
+export { studentsBirthDays };
