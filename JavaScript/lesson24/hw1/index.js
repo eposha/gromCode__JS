@@ -13,6 +13,6 @@ const getDiff = (startDate, endDate) => {
 };
 
 
-console.log(getDiff(new Date(2012, 11, 10, 10), new Date(2011, 11)));
+// console.log(getDiff(new Date(2012, 11, 10, 10), new Date(2011, 11)));
 
-// export { getDiff };
+export { getDiff };
