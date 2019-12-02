@@ -1,11 +1,14 @@
-const formater = new Intl.DateTimeFormat('en', {
+const formatter = new Intl.DateTimeFormat('en', {
     timeZone: 'UTC',
     hour: '2-digit',
     minute: '2-digit',
     hour12: false,
 });
 
-const getTime = date => formater.format(date);
+const getGreenwichTime = date => {
+    return formatter.format(date);
+}
 
+console.log(getGreenwichTime(new Date()));
 
-console.log(getTime(new Date()));
+export { getGreenwichTime };
