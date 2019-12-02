@@ -6,6 +6,8 @@ const getGreenwichTime = (date) => {
     return result;
 };
 
+export { getGreenwichTime };
+
 // console.log(getGreenwichTime(new Date()));
 
 
