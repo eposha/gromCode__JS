@@ -1,22 +1,5 @@
 const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
-// const students = [{
-//         name: 'vasy',
-//         'birthDate': '01/22/1993'
-//     },
-//     {
-//         name: 'koly',
-//         'birthDate': '01/20/1991'
-//     },
-//     {
-//         name: 'masha',
-//         'birthDate': '11/10/1996'
-//     },
-//     {
-//         name: 'vany',
-//         'birthDate': '01/19/1992'
-//     },
-// ];
 
 const studentsBirthDays = students => {
     let result = {};
