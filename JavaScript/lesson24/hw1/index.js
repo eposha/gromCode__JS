@@ -1,3 +1,6 @@
+const startDate = new Date(Date.UTC(2019, 10, 24, 20, 50, 34, 44));
+const endDate = new Date(Date.UTC(2019, 5, 22, 17, 52, 18));
+
 const getDiff = (startDate, endDate) => {
     const startDateDays = new Date(startDate).getUTCDay();
     const startDateHours = new Date(startDate).getUTCHours();
@@ -13,6 +16,6 @@ const getDiff = (startDate, endDate) => {
 };
 
 
-// console.log(getDiff(new Date(2012, 11, 10, 10), new Date(2011, 11)));
+// console.log(getDiff(startDate, endDate));
 
 export { getDiff };
