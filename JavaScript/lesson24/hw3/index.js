@@ -4,7 +4,6 @@ const todos = [
     { text: 'Visit party', done: false, id: 2, date: new Date(2017, 9, 1, 0, 0, 0, 0) },
     { text: 'Buy meat', done: true, id: 4, date: new Date(2019, 9, 1, 0, 0, 0, 0) },
     { text: 'Visit doctor', done: true, id: 3, date: new Date(2018, 9, 1, 0, 0, 0, 0) },
-
 ];
 
 
@@ -18,7 +17,8 @@ const renderListItems = listItems => {
 
     const listItemsElems = listItems
         .sort((a, b) => b.date - a.date)
-        .sort((a, b) => a.done - b.done).map(({ text, done, id }) => {
+        .sort((a, b) => a.done - b.done)
+        .sort((a, b) => b.dateСompleted - a.dateСompleted).map(({ text, done, id }) => {
 
             const listItemElem = document.createElement('li');
             listItemElem.classList.add('list__item');
@@ -50,6 +50,8 @@ const checkDoneWork = (event) => {
 
     const getId = todos.find(elem => elem.id === +checkTarget.parentElement.id);
     getId.done = checkTarget.checked;
+    getId.dateСompleted = getId.done ? new Date() : undefined;
+
 
     listElem.innerHTML = '';
     renderListItems(todos);
@@ -66,6 +68,7 @@ const creatNewWork = () => {
         text: inputElem.value,
         done: false,
         date: new Date(),
+        dateCompleted: ' ',
     });
 
     inputElem.value = '';

@@ -42,6 +42,29 @@ passwordInputElem.addEventListener('input', onPasswordChange);
 
 const formElem = document.querySelector('.login-form');
 
+// let formData = [...new FormData(formElem)];
+// // [Array1, Array2]
+// // ['email', ''], ['password', '']
+// console.log(formData);
+
+
+
+// let formDate = formData.reduce((acc, [field, value]) => ({...acc, [field]: value }), {});
+// console.log(formDate);
+
+
+// const onFormSubmit = event => {
+//     event.preventDefault();
+//     const formData = [...new FormData(formElem)]
+//         .reduce(function (acc, [field, value]) {
+//            return {...acc, [field]: value };
+//            //1. [field, value] = {...acc, [field]: value }; [field, value] = ["email", ""];
+//            //2. [field, value] = {...acc, [field]: value }; [field, value] = ["email", ""];
+//         }, {});
+
+//     alert(JSON.stringify(formData));
+// };
+
 const onFormSubmit = event => {
     event.preventDefault();
     const formData = [...new FormData(formElem)]
@@ -51,3 +74,14 @@ const onFormSubmit = event => {
 };
 
 formElem.addEventListener('submit', onFormSubmit);
+
+
+// let anotherData = formDate
+//     .reduce(function(acc, input) {
+//         const inputName = input[0]; // 'Tom'
+//         const inputValue = input[1];
+
+//         acc[inputName] = inputValue;
+
+//         return acc;
+//     }, {});
