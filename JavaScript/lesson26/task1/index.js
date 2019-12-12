@@ -2,7 +2,7 @@ localStorage.setItem('hobbies', JSON.stringify({ name: 'Tom' }));
 localStorage.setItem('name', 'Tom');
 localStorage.setItem('age', JSON.stringify(17));
 
-const getLocalStorageData = () => {
+const getLocalStorageDate = () => {
     return Object.entries(localStorage)
         .reduce((acc, [key, value]) => {
             let newValue; //next check correct value in object
@@ -16,6 +16,6 @@ const getLocalStorageData = () => {
                 [key]: newValue,
             };
         }, {});
-};
+}
 
-console.log(getLocalStorageData());
+export { getLocalStorageDate }
