@@ -1,39 +1,4 @@
-const todos = [{
-        text: 'Buy milk',
-        done: false,
-        id: 0,
-        date: new Date(2015, 9, 1, 0, 0, 0, 0),
-        dateСompleted: undefined,
-    },
-    {
-        text: 'Pick up Tom from airport',
-        done: false,
-        id: 1,
-        date: new Date(2016, 9, 1, 0, 0, 0, 0),
-        dateСompleted: undefined,
-    },
-    {
-        text: 'Visit party',
-        done: false,
-        id: 2,
-        date: new Date(2017, 9, 1, 0, 0, 0, 0),
-        dateСompleted: undefined,
-    },
-    {
-        text: 'Buy meat',
-        done: true,
-        id: 4,
-        date: new Date(2016, 9, 1, 0, 0, 0, 0),
-        dateСompleted: new Date(2017, 5, 3),
-    },
-    {
-        text: 'Visit doctor',
-        done: true,
-        id: 3,
-        date: new Date(2018, 9, 1, 0, 0, 0, 0),
-        dateСompleted: new Date(2019, 6, 4),
-    },
-];
+import { setItem, getItem, todos } from './localStorage.js';
 
 
 const listElem = document.querySelector('.list');
@@ -67,23 +32,25 @@ const renderListItems = listItems => {
             return listItemElem;
         });
 
+    listElem.innerHTML = '';
     listElem.append(...listItemsElems);
 
 };
 
-renderListItems(todos);
+
 
 const checkDoneWork = (event) => {
     const checkTarget = event.target;
     if (checkTarget.tagName != 'INPUT') return;
 
-    const getId = todos.find(elem => elem.id === +checkTarget.parentElement.id);
+    const getTasks = getItem('todos');
+
+    const getId = getTasks.find(elem => elem.id === +checkTarget.parentElement.id);
     getId.done = checkTarget.checked;
     getId.dateСompleted = getId.done ? new Date() : undefined;
 
-
-    listElem.innerHTML = '';
-    renderListItems(todos);
+    setItem('todos', getTasks);
+    renderListItems(getItem('todos'));
 };
 
 listElem.addEventListener('click', checkDoneWork);
@@ -91,8 +58,9 @@ listElem.addEventListener('click', checkDoneWork);
 
 const creatNewWork = () => {
     if (inputElem.value == '') return;
+    const pushTask = getItem('todos');
 
-    todos.unshift({
+    pushTask.push({
         id: todos.length + 1,
         text: inputElem.value,
         done: false,
@@ -102,8 +70,26 @@ const creatNewWork = () => {
 
     inputElem.value = '';
 
-    listElem.innerHTML = '';
-    renderListItems(todos);
+    setItem('todos', pushTask);
+    renderListItems(getItem('todos'));
 };
 
 btnElem.addEventListener('click', creatNewWork);
+
+const onDocumentLoaded = () => {
+    renderListItems(getItem('todos'));
+}
+
+document.addEventListener('DOMContentLoaded', onDocumentLoaded);
+
+const onStorageChange = event => {
+    if (event.key !== 'todos') {
+        return;
+    }
+    listElem.innerHTML = '';
+    renderListItems(getItem('todos'));
+};
+
+
+
+window.addEventListener('storage', onStorageChange);
