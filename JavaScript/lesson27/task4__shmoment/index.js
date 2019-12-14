@@ -11,7 +11,7 @@ const shmoment = initValue => {
                 months: (value) => result.setMonth(result.getMonth() + value),
                 years: (value) => result.setFullYear(result.getFullYear() + value),
             }
-            result = objTimes[time](value);
+            result = new Date(objTimes[time](value));
             return calculator;
         },
         subtract(time, value) {
@@ -24,7 +24,7 @@ const shmoment = initValue => {
                 months: (value) => result.setMonth(result.getMonth() - value),
                 years: (value) => result.setFullYear(result.getFullYear() - value),
             }
-            result = objTimes[time](value);
+            result = new Date(objTimes[time](value));
             return calculator;
         },
         result() {
@@ -35,6 +35,6 @@ const shmoment = initValue => {
     return calculator;
 };
 
-// console.log(shmoment(new Date(2020, 0, 7, 17, 17, 17)).add('minutes', 2).add('days', 8).subtract('years', 1).result());
+console.log(shmoment(new Date(2020, 0, 7, 17, 17, 17)).add('minutes', 2).add('days', 8).subtract('years', 1).result());
 
-export { shmoment };
+// export { shmoment };
