@@ -1,4 +1,4 @@
-export const sum = (value) => {
+export const maxFibonacci = (value) => {
     let prev = 0,
         next = 1;
 
