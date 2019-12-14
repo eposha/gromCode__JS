@@ -11,7 +11,7 @@ const shmoment = initValue => {
                 months: (value) => result.setMonth(result.getMonth() + value),
                 years: (value) => result.setFullYear(result.getFullYear() + value),
             }
-            result = new Date(objTimes[time](value));
+            result = objTimes[time](value);
             return calculator;
         },
         subtract(time, value) {
@@ -24,11 +24,11 @@ const shmoment = initValue => {
                 months: (value) => result.setMonth(result.getMonth() - value),
                 years: (value) => result.setFullYear(result.getFullYear() - value),
             }
-            result = new Date(objTimes[time](value));
+            result = objTimes[time](value);
             return calculator;
         },
         result() {
-            return result;
+            return new Date(result);
         },
     };
 
