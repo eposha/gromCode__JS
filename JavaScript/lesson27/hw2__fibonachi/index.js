@@ -3,7 +3,7 @@ export const maxFibonacci = (value) => {
         next = 1;
 
     for (let i = 0; i < value; i++) {
-        if (prev >= value) {
+        if (prev > value) {
             return prev = next - prev;
         } else {
             next = prev + next;
