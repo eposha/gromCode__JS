@@ -35,6 +35,6 @@ const shmoment = initValue => {
     return calculator;
 };
 
-console.log(shmoment(new Date(2020, 0, 7, 17, 17, 17)).add('minutes', 2).add('days', 8).subtract('years', 1).add('days', 8).result());
+// console.log(shmoment(new Date(2020, 0, 7, 17, 17, 17)).add('minutes', 2).add('days', 8).subtract('years', 1).add('days', 8).result());
 
-// export { shmoment };
+export { shmoment };
