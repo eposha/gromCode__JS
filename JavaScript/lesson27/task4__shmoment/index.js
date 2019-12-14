@@ -3,7 +3,7 @@ const shmoment = initValue => {
     const calculator = {
         add(time, value) {
             let objTimes = {
-                milliseconds: (value) => result.setmilliseconds(result.getmilliseconds() + value),
+                milliseconds: (value) => result.setMilliseconds(result.getMilliseconds() + value),
                 seconds: (value) => result.setSeconds(result.getSeconds() + value),
                 minutes: (value) => result.setMinutes(result.getMinutes() + value),
                 hours: (value) => result.setHours(result.getHours() + value),
