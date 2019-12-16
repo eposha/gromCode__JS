@@ -10,7 +10,7 @@ const requestUserData = (userId, callback) => {
             callback(null, 'Failed to load user data');
             return;
         }
-        callback();
+        callback(object);
     }, Math.floor(Math.random() * 3 + 1) * 1000);
 }
 
