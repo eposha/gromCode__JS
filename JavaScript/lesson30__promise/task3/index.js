@@ -1,19 +1,16 @@
 import { addImage } from './addImage.js';
 
 const addImageV2 = imgSrc => {
-    // const resultPomise = addImage(imgSrc);
-    addImage(imgSrc).then((data) => {
-        console.log(data);
-    });
-
-    addImage(imgSrc).catch((data) => {
-        console.log(data);
-    });
+    return addImage(imgSrc);
 };
 
-// const imgSrc = 'https://i.5sfer.com/post/postImage/thumb-8ipwnn.jpg';
 
-// addImageV2(imgSrc);
+
+// const imgSrc = 'https://i.5sfer.com/post/postImage/thumb-8ipwnn.jp';
+
+// addImageV2(imgSrc).catch(data => {
+//     console.log(data);
+// });
 // console.log(addImageV2(imgSrc));
 // console.log('Elka');
 
