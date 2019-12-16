@@ -25,16 +25,16 @@ const addSizeImg = imgSrc => {
 // const imgSrc = 'https://i.5sfer.com/post/postImage/thumb-8ipwnn.jpg';
 
 
-export const addImage = addSizeImg(imgSrc);
+const addImage = imgSrc => {
+    const resultPromise = addSizeImg(imgSrc);
 
+    resultPromise.then(data => {
+        const sizeElem = document.querySelector('.image-size');
+        const { width, height } = data;
+        sizeElem.textContent = `${width} x ${height}`;
+    });
+};
 
-// const spanElem = document.querySelector('.image-size')
+// addImage(imgSrc);
 
-// resultPromise.then(data => {
-//     const { width, height } = data;
-//     spanElem.textContent = `${width} x ${height}`;
-// });
-
-// resultPromise.catch(data => {
-//     alert(data);
-});
+export { addImage }
