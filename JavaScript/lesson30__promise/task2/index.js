@@ -1,17 +1,14 @@
-//pinger(num, period)
-
-const pinger = (num, period) => {
-    let i = num;
-    console.log('Ping');
-    const interval = setInterval(() => {
-        if (--i > 0) {
-            console.log('Ping');
-        } else {
-            clearInterval(interval);
-        }
-
-    }, period);
+const delayPromise = delay => {
+    const p = new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve(console.log('Done'));
+        }, delay);
+    });
+    return p;
 };
 
-// pinger(5, 1000);
-export { pinger };
+const delay = time => {
+    return delayPromise(time);
+};
+
+export { delay };
