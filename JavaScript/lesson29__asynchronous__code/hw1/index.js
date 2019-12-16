@@ -9,11 +9,11 @@ const requestUserData = (userId, callback) => {
         userId,
         email: 'userid777@example.com'
     };
-    setTimeout(() => {
-        function callback() {
-            return object;
-        }
-    }, 1000);
+
+    callback = () => object;
+    setTimeout(callback, Math.floor(Math.random() * 3 + 1) * 1000);
 }
+
+// requestUserData('broken');
 
 export { requestUserData };
