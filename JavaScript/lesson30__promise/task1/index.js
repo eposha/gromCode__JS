@@ -22,19 +22,13 @@ const addSizeImg = imgSrc => {
     return p;
 };
 
-// const imgSrc = 'https://i.5sfer.com/post/postImage/thumb-8ipwnn.jpg';
+const imgSrc = 'https://i.5sfer.com/post/postImage/thumb-8ipwnn.jpg';
 
 
 const addImage = imgSrc => {
-    const resultPromise = addSizeImg(imgSrc);
-
-    resultPromise.then(data => {
-        const sizeElem = document.querySelector('.image-size');
-        const { width, height } = data;
-        sizeElem.textContent = `${width} x ${height}`;
-    });
+    return addSizeImg(imgSrc);
 };
 
-// addImage(imgSrc);
+// console.log(addImage(imgSrc));
 
 export { addImage }
