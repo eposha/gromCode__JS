@@ -13,4 +13,5 @@ const pinger = (num, period) => {
     }, period);
 };
 
-pinger(5, 1000);
+// pinger(5, 1000);
+export { pinger };
