@@ -10,14 +10,14 @@ const addImage = (imgSrc, callback) => {
         callback(null, width, height);
     };
 
+    imgElem.addEventListener('error', () => callback('Image load failed'));
     imgElem.addEventListener('load', onImageLoaded);
 
-    imgElem.addEventListener('error', () => callback('Image load failed'));
 };
 
 const onImageLoaded = (error, width, height) => {
     if (error) {
-        console.log(error);
+        // console.log(error);
         return;
     }
     const sizeElem = document.querySelector('.image-size');
