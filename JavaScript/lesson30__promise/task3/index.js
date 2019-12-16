@@ -3,11 +3,11 @@ import { addImage } from './addImage.js';
 const addImageV2 = imgSrc => {
     const resultPomise = addImage(imgSrc);
     resultPomise.then((data) => {
-        return data;
+        console.log(data);
     });
 
     resultPomise.catch((data) => {
-        return data;
+        console.log(data);
     });
 };
 
