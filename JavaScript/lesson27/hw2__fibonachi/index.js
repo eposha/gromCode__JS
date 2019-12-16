@@ -14,8 +14,8 @@ export const maxFibonacci = (value) => {
             prev = next - prev;
         }
     };
-    return prev;
+    return next - prev;
 };
 
-// console.log(maxFibonacci(1));
+// console.log(maxFibonacci(5.7));
 // maxFibonacci(5);

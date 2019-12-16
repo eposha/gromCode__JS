@@ -1,0 +1,12 @@
+.page {
+    display: flex;
+    justify-content: center;
+    margin-top: 50vh;
+}
+
+#button {
+    background-color: #fff;
+    border: 2px solid grey;
+    border-radius: 5px;
+    font-size: 18px;
+}
