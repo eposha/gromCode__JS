@@ -1,4 +1,4 @@
-const addImg = (imgSrc, callback) => {
+export const addImage = (imgSrc, callback) => {
     const imgElem = document.createElement('img');
     imgElem.setAttribute('alt', 'My Photo');
     imgElem.src = imgSrc;
@@ -15,7 +15,7 @@ const addImg = (imgSrc, callback) => {
     imgElem.addEventListener('error', () => callback('Image load failed'));
 };
 
-const imgSrc = 'http://www.vseznaika.org/wp-content/uploads/206/03/pic-00892.jpg';
+const imgSrc = 'https://server.com/image.png';
 
 const onImageLoaded = (error, width, height) => {
     if (error) {
@@ -26,7 +26,7 @@ const onImageLoaded = (error, width, height) => {
     sizeElem.textContent = `${width} x ${height}`;
 };
 
-addImg(imgSrc, onImageLoaded);
+// addImage(imgSrc, onImageLoaded);
 
 
 
