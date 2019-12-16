@@ -22,7 +22,7 @@ const addSizeImg = imgSrc => {
     return p;
 };
 
-const imgSrc = 'https://i.5sfer.com/post/postImage/thumb-8ipwnn.jpg';
+// const imgSrc = 'https://i.5sfer.com/post/postImage/thumb-8ipwnn.jpg';
 
 
 const addImage = imgSrc => {
