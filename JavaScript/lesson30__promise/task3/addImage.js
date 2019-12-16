@@ -1,11 +1,23 @@
-const addImage = imgSrc => {
+const addImage = (imgSrc, callback) => {
     const imgElem = document.createElement('img');
     imgElem.setAttribute('alt', 'My Photo');
     imgElem.src = imgSrc;
-    return imgElem;
+    const containerElem = document.querySelector('.page');
+    containerElem.append(imgElem);
+
+    const { width, height } = imgElem;
+
+    const notLoaded = 'Image load failed';
+
+    imgElem.addEventListener('load', callback(null, { width, height }));
+    imgElem.addEventListener('error', callback(new Error(notLoaded)));
+
 };
 
 export { addImage };
+
+
+
 
 // const addImage = imgSrc => {
 //     const p = new Promise((resolve, reject) => {
