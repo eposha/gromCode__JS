@@ -6,15 +6,16 @@ export const maxFibonacci = (value) => {
         return 0;
     };
 
-    for (let i = 0; i < value + 1; i++) {
-        if (prev >= value) {
+    for (let i = 0; i < value; i++) {
+        if (prev > value) {
             return next - prev;
         } else {
             next = prev + next;
             prev = next - prev;
         }
     };
+    return prev;
 };
 
-// console.log(maxFibonacci(5));
+// console.log(maxFibonacci(1));
 // maxFibonacci(5);
