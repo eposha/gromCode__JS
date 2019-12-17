@@ -4,16 +4,17 @@ const getRandomNumber = (from, to) =>
 
 const request = url => new Promise(resolve => {
     const randomDelay = getRandomNumber(1000, 3000);
-
-    setTimeout(() => {
-        resolve({
-            userData: {
-                name: 'Tom',
-                age: 17,
-            },
-            source: url,
-        })
-    }, randomDelay);
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve({
+                userData: {
+                    name: 'Tom',
+                    age: 17,
+                },
+                source: url,
+            })
+        }, randomDelay);
+    })
 });
 
 
@@ -25,7 +26,7 @@ const servers = [
 
 const getUserASAP = userId => {
     const userUrls = servers
-        .map(serverUrl => `${serverUrl}/users/${userId}`);
+        .map(serverUrl => `${serverUrl}/${userId}`);
 
     const requests = userUrls
         .map(userUrl => request(userUrl));
