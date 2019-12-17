@@ -17,11 +17,11 @@ const request = url => new Promise(resolve => {
 });
 
 
-const servers = [
-    'https://server.com.us',
-    'https://server.com.eu',
-    'https://server.com.au'
-]
+// const servers = [
+//     'https://server.com.us',
+//     'https://server.com.eu',
+//     'https://server.com.au'
+// ]
 
 const getUserASAP = userId => {
     const userUrls = servers
@@ -33,5 +33,7 @@ const getUserASAP = userId => {
     return Promise.race(requests);
 };
 
-getUserASAP('user-id-1')
-    .then(result => console.log(result));
+export { getUserASAP };
+
+// getUserASAP('user-id-1')
+//     .then(result => console.log(result));
