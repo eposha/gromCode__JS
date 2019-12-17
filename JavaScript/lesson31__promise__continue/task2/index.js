@@ -12,11 +12,13 @@ const asyncCalculator = num => new Promise((resolve) => {
         }, 500)
     }))
     .then(value => {
-        const result = value * 2;
-        console.log(`Doubled value: ${result}`);
-        return result;
-    });
+        setTimeout(() => {
+            const result = value * 2;
+            console.log(`Doubled value: ${result}`);
+            return result;
+        }, 500)
+    })
 
-
-asyncCalculator(5)
-    .then(value => console.log(value));
+export { asyncCalculator };
+// asyncCalculator(5);
+// .then(value => console.log(value));
