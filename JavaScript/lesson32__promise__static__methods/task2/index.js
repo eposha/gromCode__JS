@@ -17,11 +17,11 @@ const request = url => new Promise(resolve => {
 });
 
 
-// const servers = [
-//     'https://server.com.us',
-//     'https://server.com.eu',
-//     'https://server.com.au'
-// ]
+const servers = [
+    'https://server.com.us',
+    'https://server.com.eu',
+    'https://server.com.au'
+]
 
 const getUserASAP = userId => {
     const userUrls = servers
