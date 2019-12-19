@@ -1,14 +1,14 @@
-const userAvatarElem = document.querySelector('.user__avatar');
-const userNameElem = document.querySelector('.user__name');
-const userLocationElem = document.querySelector('.user__location');
+// const userAvatarElem = document.querySelector('.user__avatar');
+// const userNameElem = document.querySelector('.user__name');
+// const userLocationElem = document.querySelector('.user__location');
 
-const defaultAvatar = 'https://avatars3.githubusercontent.com/u1000';
+// const defaultAvatar = 'https://avatars3.githubusercontent.com/u1000';
 
 
-userAvatarElem.src = defaultAvatar;
+// userAvatarElem.src = defaultAvatar;
 
-const showUserBtnElem = document.querySelector('.name-form__btn');
-const userNameInputeElem = document.querySelector('.name-form__input');
+// const showUserBtnElem = document.querySelector('.name-form__btn');
+// const userNameInputeElem = document.querySelector('.name-form__input');
 
 
 
