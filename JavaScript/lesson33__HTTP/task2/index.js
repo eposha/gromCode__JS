@@ -1,17 +1,3 @@
-// const userAvatarElem = document.querySelector('.user__avatar');
-// const userNameElem = document.querySelector('.user__name');
-// const userLocationElem = document.querySelector('.user__location');
-
-// const defaultAvatar = 'https://avatars3.githubusercontent.com/u1000';
-
-
-// userAvatarElem.src = defaultAvatar;
-
-// const showUserBtnElem = document.querySelector('.name-form__btn');
-// const userNameInputeElem = document.querySelector('.name-form__input');
-
-
-
 const checkAvailable = (arr, data) => arr
     .find(obj => {
         return obj.email == data;
@@ -54,42 +40,7 @@ const getMostActiveDevs = data => {
     const { days, userId, repoId } = data;
     const startDate = getDateOfStartCalc(days);
     return fetchMoreActivities(startDate, userId, repoId)
-        // .then(result => filterLessActiveDevs(result))
 
 };
 
-// console.log(getMostActiveDevs({ days: 10, userId: 'eposha', repoId: 'project_calendar' })
-//     .then(data => console.log(data)))
-
 export { getMostActiveDevs };
-
-// getMostActiveDevs({ days: 10, userId: 'eposha', repoId: 'project_calendar' })
-
-// showUserBtnElem.addEventListener('click', onSearchUser);
-
-
-
-
-
-
-// const fetchUserData = userName => {
-//     return fetch(`https://api.github.com/users/${userName}`)
-//         .then(response => response.json());
-// };
-
-// const renderUserData = userData => {
-//     const { avatar_url, name, location } = userData;
-//     userAvatarElem.src = avatar_url;
-//     userNameElem.textContent = name;
-//     userLocationElem.textContent = location ?
-//         `from ${location}` :
-//         '';
-// };
-
-// const onSearchUser = () => {
-//     const userName = userNameInputeElem.value
-//     fetchUserData(userName)
-//         .then(userData => renderUserData(userData));
-// };
-
-// showUserBtnElem.addEventListener('click', onSearchUser);
