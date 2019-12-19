@@ -34,7 +34,7 @@ const countCommits = arr => arr
     }, [{}]);
 
 const filterLessActiveDevs = arr => {
-    arr.sort((a, b) => a.count > b.count);
+    arr.sort((a, b) => b.count - a.count);
     const firstDev = arr[0].count;
     return arr.filter(obj => obj.count == firstDev);
 };
