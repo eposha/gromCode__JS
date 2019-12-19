@@ -53,10 +53,12 @@ const getMostActiveDevs = data => {
     const { days, userId, repoId } = data;
     const startDate = getDateOfStartCalc(days);
     return fetchMoreActivities(startDate, userId, repoId)
+        // .then(result => filterLessActiveDevs(result))
 
 };
 
-// getMostActiveDevs({ days: 10, userId: 'eposha', repoId: 'project_calendar' }).then(data => console.log(data))
+// console.log(getMostActiveDevs({ days: 10, userId: 'eposha', repoId: 'project_calendar' })
+//     .then(data => console.log(data)))
 
 export { getMostActiveDevs };
 
