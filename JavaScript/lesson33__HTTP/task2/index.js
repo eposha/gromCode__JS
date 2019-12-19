@@ -43,7 +43,8 @@ const fetchMoreActivities = (startDate, userId, repoId) => {
     return fetch(`https://api.github.com/repos/${userId}/${repoId}/commits`)
         .then(commits => commits.json())
         .then(data => data.filter(obj => Date.parse(`${obj.commit.author.date}`) > startDate))
-        .then(obj => countCommits(obj).splice(1));
+        .then(obj => countCommits(obj).splice(1))
+        .then(result => filterLessActiveDevs(result));
 };
 
 const getDateOfStartCalc = days => new Date().setDate(new Date().getDate() - days);
@@ -51,10 +52,11 @@ const getDateOfStartCalc = days => new Date().setDate(new Date().getDate() - day
 const getMostActiveDevs = data => {
     const { days, userId, repoId } = data;
     const startDate = getDateOfStartCalc(days);
-    fetchMoreActivities(startDate, userId, repoId)
-        .then(data => filterLessActiveDevs(data));
-    // .then(data => filterLessActiveDevs(data));
+    return fetchMoreActivities(startDate, userId, repoId)
+
 };
+
+// getMostActiveDevs({ days: 10, userId: 'eposha', repoId: 'project_calendar' }).then(data => console.log(data))
 
 export { getMostActiveDevs };
 
