@@ -14,7 +14,7 @@ function onCreateTask() {
         text,
         done: false,
         createDate: new Date().toISOString(),
-        id: Date.now(),
+        // id: Date.now(),
     };
 
     creatTask(newTask)
@@ -22,7 +22,7 @@ function onCreateTask() {
         .then(newTasksList => {
             setItem('tasksList', newTasksList)
             renderTasks();
-        })
+        });
 
     // const newTasksList = tasksList.concat();
 

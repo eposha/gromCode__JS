@@ -3,6 +3,10 @@ import { renderTasks } from './renderer.js';
 import { getTasksList } from './tasksGateway.js';
 import { setItem } from './storage.js';
 
+
+function onStorageChange(event) {
+    if (event.key === 'tasksList') renderTasks();
+};
 document.addEventListener('DOMContentLoaded', () => {
     getTasksList()
         .then(tasksList => {
@@ -11,9 +15,5 @@ document.addEventListener('DOMContentLoaded', () => {
         })
     initTodoListHandlers();
 });
-
-function onStorageChange(event) {
-    if (event.key === 'tasksList') renderTasks();
-};
 
 window.addEventListener('storage', onStorageChange);
