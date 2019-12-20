@@ -17,6 +17,7 @@ const checkStatus = data => {
         nameInputElem.value = '';
         passwordInputElem.value = '';
         submitBtnElem.disabled = true;
+        alert(data);
     };
 };
 
