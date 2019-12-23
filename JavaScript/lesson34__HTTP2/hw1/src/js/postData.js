@@ -10,7 +10,17 @@ const passwordInputElem = document.querySelector('#password');
 
 const formElem = document.querySelector('.login-form');
 
+
+
 const postData = () => {
+    const formData = [...new FormData(formElem)]
+        .reduce((acc, [field, value]) => (
+
+            {...acc, [field]: value }), {});
+
+    console.log(JSON.stringify(formData));
+
+
 
     const newUser = {
         name: formElem.name,
