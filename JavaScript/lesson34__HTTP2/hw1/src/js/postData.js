@@ -8,16 +8,14 @@ const emailInputElem = document.querySelector('#email');
 const nameInputElem = document.querySelector('#name');
 const passwordInputElem = document.querySelector('#password');
 
+const formElem = document.querySelector('.login-form');
+
 const postData = () => {
 
-    const email = emailInputElem.value;
-    const name = nameInputElem.value;
-    const password = passwordInputElem;
-
     const newUser = {
-        name,
-        email,
-        password,
+        name: formElem.name,
+        email: formElem.email,
+        password: formElem.password,
     };
 
     createUser(newUser)
