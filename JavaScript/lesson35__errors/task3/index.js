@@ -27,13 +27,12 @@ const onSearchUser = () => {
         .then(url => fetchRepositories(url))
         .then(reposList => {
             return renderRepos(reposList);
+            hideSpinner();
         })
         .catch(err => {
-            alert(err.message);
-        })
-        .finally(() => {
             hideSpinner();
-        });
+            alert('Failed to load data');
+        })
 };
 
 showUserBtnElem.addEventListener('click', onSearchUser);
