@@ -33,6 +33,9 @@ const onSearchUser = () => {
             hideSpinner();
             alert('Failed to load data');
         })
+        .finnaly(() => {
+            hideSpinner();
+        })
 };
 
 showUserBtnElem.addEventListener('click', onSearchUser);
