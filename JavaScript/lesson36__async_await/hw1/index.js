@@ -7,8 +7,8 @@ const getUsersBlogs = async arr => {
     return userData.map(user => user.blog);
 };
 
-getUsersBlogs(['google', 'facebook', 'gaearon'])
-    .then(data => console.log(data))
+// getUsersBlogs(['google', 'facebook', 'gaearon'])
+//     .then(data => console.log(data))
 
 
 
