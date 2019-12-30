@@ -1,6 +1,6 @@
 export const getUsersBlogs = async arr => {
     try {
-        let response = await arr.map(userId => fetch(`https://api.github.com/users/${userId}`)
+        let response = await arr.map(userId => fetch(`https://api.github.com//${userId}`)
             .then(response => {
                 if (response.ok) return response.json()
                 throw new Error('Failed to load data');
