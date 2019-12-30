@@ -1,8 +1,11 @@
 export const getUsersBlogs = async arr => {
     try {
         let response = await arr.map(userId => fetch(`https://api.github.com/users/${userId}`)
-            .then(promise => promise.json())
-            .then(resolve => resolve.blog));
+            .then(resolve => {
+                if (response.ok) return resolve.json()
+                throw new Error('Failed to load data');
+            })
+            .then(user => user.blog));
         const usersData = await Promise.all(response);
         return usersData;
     } catch (err) {
