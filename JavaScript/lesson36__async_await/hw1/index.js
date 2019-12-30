@@ -1,28 +1,19 @@
 export const getUsersBlogs = async arr => {
-    const request = await arr.map(userId => fetch(`https://api.github.com/users/${userId}`)
-        .then(response => {
-            if (response.ok) return response.json();
-            throw new Error('Failed to load data');
-        }));
-    console.log(request)
-    let email = [];
+    try {
+        let response = await arr.map(userId => fetch(`https://api.github.com/users/${userId}`)
+            .then(promise => promise.json())
+            .then(resolve => resolve.blog));
+        const usersData = await Promise.all(response);
+        return usersData;
+    } catch (err) {
+        console.log(err);
+    }
 
-    const result = request
-        .map(arg => arg
-            .then(data => email.push(data.blog)))
-        // .then(response => response.map(arg => arg.json()))
-        // .then(data => data.map(arg => arg.then(data => email.push(data.blog))));
-        // return email;
-        // .then(data => console.log(data.map(arg => arg.blog))))
-        // .then(data => console.log(data))
-        // .then(response => response.blog);
-    return email;
-    // return result.map(data => data.blog);
-    // return request;
-    // const some = result.map(data => (data.json())
-    //     .then(data => data.blog));
-    // return some;
 };
+
+// getUsersBlogs(['google', 'facebook', 'gaearon'])
+//     .then(data => console.log(data))
+// .then(data => console.log(data))
 
 // getUsersBlogs(['google', 'facebook', 'gaearon'])
 //     .then(data => console.log(data))
@@ -30,12 +21,4 @@ export const getUsersBlogs = async arr => {
 
 
 
-
-// async function showAvatar() {
-//     let response = await fetch(`https://api.github.com/users/google`);
-//     let user = await response.json();
-//     return user.blog;
-// };
-
-// showAvatar()
-//     .then(user => console.log(user));
+// const request = await arr.map(userId => fetch(`https://api.github.com/users/${userId}`)
